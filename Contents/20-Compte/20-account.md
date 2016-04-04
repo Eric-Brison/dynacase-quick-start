@@ -1,13 +1,13 @@
-# Initialisation des comptes {#quickstart:b4800208-9c02-45bc-badc-9948c2277eae}
+# Initialisation des comptes {#dynacase-quickstart:b4800208-9c02-45bc-badc-9948c2277eae}
 
-## Objectifs {#quickstart:d3ca62ec-47fb-42a9-8402-3c580a6382f7}
+## Objectifs {#dynacase-quickstart:d3ca62ec-47fb-42a9-8402-3c580a6382f7}
 
 -   Utiliser l'interface d'administration pour initialiser des comptes,
 -   Exporter les comptes,
 -   Initialiser des comptes à l'aide des formats d'exports,
 -   Produire le paquet `webinst` en important les comptes.
 
-## Cadre {#quickstart:fdbc640b-3030-45f5-ad2f-486d3eead6c3}
+## Cadre {#dynacase-quickstart:fdbc640b-3030-45f5-ad2f-486d3eead6c3}
 
 Lors de la phase de spécification, les éléments suivants ont été identifiés. L'application nécessite :
 
@@ -46,7 +46,7 @@ De plus, l'application doit être initialisée avec les utilisateurs suivants :
     -   responsable de la DSI,
     -   administrateur fonctionnel.
 
-## Initialisation du premier utilisateur {#quickstart:653a946b-9655-4728-9c65-50c90bb771df}
+## Initialisation du premier utilisateur {#dynacase-quickstart:653a946b-9655-4728-9c65-50c90bb771df}
 
 Pour initialiser les différents types de comptes, vous pouvez utiliser l'interface web.
 Veuillez vous rendre sur l'interface d'administration : `http://<nomDeDomaine>/dynacase/admin.php`
@@ -86,14 +86,14 @@ Les utilisateurs ont quelques spécificités, vous pouvez :
     ne peut plus se connecter à plateforme,
 -   désactiver le compte à l'aide du menu `Compte`.
 
-## Export du premier utilisateur {#quickstart:137414aa-e378-4ece-b343-6e0ddc4d27c0}
+## Export du premier utilisateur {#dynacase-quickstart:137414aa-e378-4ece-b343-6e0ddc4d27c0}
 
 Vous allez maintenant exporter cet utilisateur pour pouvoir l'importer avec le paquet d'installation.
 
 Tous les éléments nécessaires au paramétrage de l'application doivent être importés pour permettre les installations et
 mises à jour de l'application dans divers environnements (développement, pré-production, production).
 
-### Mise en place du nom logique {#quickstart:6124a031-bc16-4182-ae7e-9b659b918905}
+### Mise en place du nom logique {#dynacase-quickstart:6124a031-bc16-4182-ae7e-9b659b918905}
 
 Pour pouvoir référencer l'utilisateur entre les différents contextes, vous allez lui attribuer un **nom logique**.
 Le nom logique (chaîne de caractères) est un identifiant unique au sein d'un contexte. Il permet de retrouver le document.
@@ -111,7 +111,7 @@ L'interface de saisie du nom logique est présentée à nouveau avec cette fois 
 
 Veuillez fermer la fenêtre de propriétés.
 
-#### Export  {#quickstart:3fee7d00-3ee4-4ced-ba78-b6c37e36ad6d}
+#### Export  {#dynacase-quickstart:3fee7d00-3ee4-4ced-ba78-b6c37e36ad6d}
 
 Vous allez maintenant exporter le document. Veuillez cliquer sur `Autres` et ensuite sur `Ajouter au porte-document`.
 
@@ -147,7 +147,7 @@ Vous retrouvez ensuite le contenu suivant :
 
 Ce fichier contient l'ensemble des valeurs contenues dans la fiche utilisateur **à l'exception des mots de passe qui, étant encodés en base, ne sont pas exportables.**
 
-### Format d'export {#quickstart:9f1e3e32-bb48-4e6b-807a-37ff31c0f705}
+### Format d'export {#dynacase-quickstart:9f1e3e32-bb48-4e6b-807a-37ff31c0f705}
 
 Le format d'export CSV repose sur quelques mots clefs, les deux mots utilisés dans le fichier produit sont :
 
@@ -202,7 +202,7 @@ entre les lignes de la partie installation (`post-install`):
 
 Le fichier CSV complété peut-être consulté [ici][source_iuser].
 
-## Ajout des autres utilisateurs {#quickstart:28c4dbb7-97ea-4902-94ca-7e04db2d6d43}
+## Ajout des autres utilisateurs {#dynacase-quickstart:28c4dbb7-97ea-4902-94ca-7e04db2d6d43}
 
 Vous pouvez utiliser l'interface pour créer les autres utilisateurs. Ce fonctionnement est assez vite fastidieux.
 Vous allez donc créer les autres utilisateurs directement en modifiant le fichier `IUSER__INIT_DATA.csv`.
@@ -233,7 +233,7 @@ Si vous déployez, vous aurez la liste suivante :
 
 ![ Groupe ](20-10-user-imported.png "Utilisateur après importation")
 
-## Création des groupes {#quickstart:78e478c8-e1bf-4766-9ae1-de45e13e3068}
+## Création des groupes {#dynacase-quickstart:78e478c8-e1bf-4766-9ae1-de45e13e3068}
 
 Vous allez maintenant créer les groupes. La procédure est similaire à celle de création d'utilisateurs.
 
@@ -313,7 +313,7 @@ Si vous générez le webinst et que vous l'installez en choisissant l'option `In
 
 ![ Liste des groupes ](20-10-group-creation5.png "Liste des groupes")
 
-## Association des utilisateurs aux groupes {#quickstart:0ac2eeca-c96e-46fc-b79f-4bf77404cc93}
+## Association des utilisateurs aux groupes {#dynacase-quickstart:0ac2eeca-c96e-46fc-b79f-4bf77404cc93}
 
 L'association des utilisateurs aux groupes se passe de la même manière. Veuillez ouvrir le fichier `IUSER__INIT_DATA.csv`
 et compléter la colonne `D` pour indiquer pour chaque utilisateur à quel groupe il appartient.
@@ -328,7 +328,7 @@ Soit :
 
 et sauvez le fichier. Celui peut-être consulté [ici](https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-user-add-group/COGIP_AUDIT/IUSER__INIT_DATA.csv).
 
-## Création des rôles {#quickstart:1a5c2498-c522-491b-a7a3-f73d03b13116}
+## Création des rôles {#dynacase-quickstart:1a5c2498-c522-491b-a7a3-f73d03b13116}
 
 Vous allez maintenant créer les rôles. La procédure est similaire à celle de création des utilisateurs.
 
@@ -389,7 +389,7 @@ Après ajout des rôles définis lors de la phase de d'analyse, on obtient :
 
 Une fois initialisé le fichier de rôle est semblable à [celui-ci](https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-role/COGIP_AUDIT/ROLE__INIT_DATA.csv).
 
-### Association des rôles aux groupes et utilisateurs {#quickstart:e946f46a-9d47-4f44-a61d-45248f47ce62}
+### Association des rôles aux groupes et utilisateurs {#dynacase-quickstart:e946f46a-9d47-4f44-a61d-45248f47ce62}
 
 Vous allez maintenant conclure la partie pratique de ce chapitre en associant les rôles aux utilisateurs et aux groupes.
 
@@ -427,7 +427,7 @@ Ce qui donne le résultat suivant :
 
 Vous pouvez retrouver les fichiers complétés [dans les sources](https://github.com/Anakeen/dynacase-quick-start-code/tree/3.2-associate-role-account/COGIP_AUDIT).
 
-## Mise en place des modifications {#quickstart:c7522c13-68ab-47c7-b592-6c672b963820}
+## Mise en place des modifications {#dynacase-quickstart:c7522c13-68ab-47c7-b592-6c672b963820}
 
 Vous allez maintenant déployer vos modifications :
 
@@ -442,14 +442,14 @@ Vous pouvez voir que les groupes ont été ajoutés, l'arborescence respectée e
 <span class="flag inline nota-bene"></span>  Le recalcul de l'arborescence des groupes et des droits est asynchrone,
 il peut y avoir un décalage de quelques minutes entre l'installation du paquet et l'arrivée des données sur le contexte.
 
-## Conclusion {#quickstart:ebfe623e-99c3-4b85-92a5-a790685b3e7e}
+## Conclusion {#dynacase-quickstart:ebfe623e-99c3-4b85-92a5-a790685b3e7e}
 
 Dans ce chapitre, vous avez parcouru l'ensemble des techniques pour créer, associer et importer les différents éléments
 nécessaires à la gestion des comptes Dynacase.
 
 Ces éléments vous serviront dans toutes les autres phases de vos projets pour fixer les droits, définir des vues particulières, etc.
 
-## Pour aller plus loin {#quickstart:ff368e8d-9630-408d-9644-5383753f2ac0}
+## Pour aller plus loin {#dynacase-quickstart:ff368e8d-9630-408d-9644-5383753f2ac0}
 
 Vous pouvez consulter les chapitres suivants de la documentation :
 
@@ -462,6 +462,6 @@ Vous pouvez consulter les chapitres suivants de la documentation :
 [githubSourceAfter]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-20-20.zip "Github : source après le tutoriel"
 [docCompte]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:2bd98eec-5b03-4af0-b9d6-1bbf78fe9733.html "Doc Dynacase : Comptes"
 [formatCSV] : https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:2fb3284a-2424-44b2-93ae-41dc3969e093.html "Doc Dynacase : CSV"
-[annexe]:   #quickstart:69f091b6-34ef-47b0-a453-8e00676b7dcd
+[annexe]:   #dynacase-quickstart:69f091b6-34ef-47b0-a453-8e00676b7dcd
 [source_iuser]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-iuser/COGIP_AUDIT/IUSER__INIT_DATA.csv
 [source_igroup]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-group/COGIP_AUDIT/IGROUP__INIT_DATA.csv

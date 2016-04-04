@@ -1,8 +1,8 @@
-# Mise en place des structures {#quickstart:3b64d38f-81aa-4c02-aad5-77271247bf15}
+# Mise en place des structures {#dynacase-quickstart:3b64d38f-81aa-4c02-aad5-77271247bf15}
 
 Ce chapitre va vous permettre d'initialiser vos premières familles.
 
-## Objectifs {#quickstart:a17c7d35-e9ba-47a4-9b0f-2919d6926966}
+## Objectifs {#dynacase-quickstart:a17c7d35-e9ba-47a4-9b0f-2919d6926966}
 
 * Créer une famille de base,
 * Créer les familles en utilisant l'héritage,
@@ -11,7 +11,7 @@ Ce chapitre va vous permettre d'initialiser vos premières familles.
 * Faire une première traduction,
 * Déployer votre module.
 
-## Cadre {#quickstart:c77a23ec-d38d-4ada-8a99-8b5124297770}
+## Cadre {#dynacase-quickstart:c77a23ec-d38d-4ada-8a99-8b5124297770}
 
 L'analyse des besoins a montré que votre application nécessite les familles suivantes :
 
@@ -60,9 +60,9 @@ Fiche de non-conformité
         -   un responsable,
         -   une date de prise en compte.
 
-## Partie théorique {#quickstart:75dc2bf5-ae31-434e-a538-96ad9c52967f}
+## Partie théorique {#dynacase-quickstart:75dc2bf5-ae31-434e-a538-96ad9c52967f}
 
-### Structure de famille {#quickstart:652fd302-fef6-4335-bea8-e26a60759537}
+### Structure de famille {#dynacase-quickstart:652fd302-fef6-4335-bea8-e26a60759537}
 
 La structure d'une famille est définie par deux éléments :
 
@@ -81,7 +81,7 @@ La structure de la famille est utilisée en interne par Dynacase pour :
 * générer les stubs,
 * etc.
 
-## Création de votre première famille : Famille de base {#quickstart:d16313a5-1ae6-422a-9f45-8d721aafcd18}
+## Création de votre première famille : Famille de base {#dynacase-quickstart:d16313a5-1ae6-422a-9f45-8d721aafcd18}
 
 À la liste des familles identifiées de manière fonctionnelle, nous allons ajouter une famille dite _de base_,
 dont toutes les familles de l'application hériteront.
@@ -150,7 +150,7 @@ Vous devez avoir un fichier `info.xml` semblable à :
         <process command="programs/update_catalog" />
     </post-upgrade>
 
-## Création des fichiers de familles {#quickstart:72980b93-3f1f-4aa0-b12d-756e072f2029}
+## Création des fichiers de familles {#dynacase-quickstart:72980b93-3f1f-4aa0-b12d-756e072f2029}
 
 Vous allez maintenant créer les autres familles, reprenez la ligne de commande ci-dessus pour chacune des familles présentées ci-dessous.
 
@@ -204,11 +204,11 @@ Votre `info.xml` contient les lignes suivantes :
 
 Vous pouvez retrouver l'ensemble de ces fichiers initialisés dans les [sources du chapitre complété][tuto_after_30_20].
 
-## Ajout des attributs {#quickstart:dfb226d3-2b6d-45a2-b5de-7a671186247b}
+## Ajout des attributs {#dynacase-quickstart:dfb226d3-2b6d-45a2-b5de-7a671186247b}
 
 Vous allez maintenant définir les [attributs][DocAttribut] contenus dans vos familles.
 
-### Référentiel qualité {#quickstart:f8d481f6-4be2-457c-a7e3-96165fbf4cf9}
+### Référentiel qualité {#dynacase-quickstart:f8d481f6-4be2-457c-a7e3-96165fbf4cf9}
 
 Vous allez commencer par la famille `Référentiel qualité`. Ouvrez le fichier `./COGIP_AUDIT/COGIP_AUDIT_REFERENTIEL__STRUCT.csv`.
 
@@ -266,7 +266,7 @@ Vous pouvez voir ci-dessous un exemple de construction sur la famille chapitre.
 
 Vous pouvez retrouver le [fichier complété dans les sources][tuto_audit_ref].
 
-### Chapitre {#quickstart:db00ea11-3c9a-4a99-8879-af61e8ad2745}
+### Chapitre {#dynacase-quickstart:db00ea11-3c9a-4a99-8879-af61e8ad2745}
 
 Vous allez maintenant compléter la famille `chapitre`.
 Cette famille contient un lien vers son référentiel, de manière a pouvoir retrouver facilement tous les chapitres d'un référentiel.
@@ -286,7 +286,7 @@ et permet de n'afficher en édition que les documents issus de cette famille.
 
 Vous pouvez retrouver le [fichier complété dans les sources][tuto_audit_chapitre].
 
-### Fiche de non-conformité {#quickstart:6bc0b33f-c7a9-4b20-b940-8d939c3b97ec}
+### Fiche de non-conformité {#dynacase-quickstart:6bc0b33f-c7a9-4b20-b940-8d939c3b97ec}
 
 Vous allez maintenant compléter la `Fiche de non-conformité`.
 
@@ -303,7 +303,7 @@ Vous pouvez remarquer la présence de deux nouveaux éléments structurants :
 
 Vous pouvez retrouver le [fichier complété dans les sources][tuto_audit_fnc].
 
-### Audit {#quickstart:b2eccdab-bbda-4d80-86a7-dd5e6cdb22dc}
+### Audit {#dynacase-quickstart:b2eccdab-bbda-4d80-86a7-dd5e6cdb22dc}
 
 Vous allez maintenant compléter votre dernière famille, la `Fiche d'audit`.
 
@@ -318,7 +318,7 @@ Vous pouvez retrouver le [fichier complété dans les sources][tuto_audit_audit]
 
 Bravo ! Vous avez initialisé l'ensemble des familles.
 
-## Génération des stubs {#quickstart:df9b59b1-3a7f-420b-a89d-36cd6894edb9}
+## Génération des stubs {#dynacase-quickstart:df9b59b1-3a7f-420b-a89d-36cd6894edb9}
 
 Vous allez maintenant produire les stubs. Ce sont des fichiers PHP qui sont générés pour aider au développement de l'application.
 
@@ -365,7 +365,7 @@ Exemple de complétion d'attribut à l'aide des stubs :
 
 ![ Complétion d'attribut ](30-20-structure-stub-completion.png "Complétion d'attribut dans PhpStorm")
 
-## Internationalisation {#quickstart:989b4a9e-e3d8-475e-9dcf-9a158605eab6}
+## Internationalisation {#dynacase-quickstart:989b4a9e-e3d8-475e-9dcf-9a158605eab6}
 
 Vous allez maintenant extraire les clefs permettant de traduire vos familles.
 
@@ -415,7 +415,7 @@ La notation `fuzzy` indique que la traduction est une proposition pour aider le 
 
 Pour le fichier `fr`, vous pouvez enlever les fuzzy car les propositions sont correctes, par contre il vous faudra traduire fichier `en`.
 
-## Mise en place des modifications {#quickstart:62bc3a4e-9b6c-4da2-9fb0-145ecee0f281}
+## Mise en place des modifications {#dynacase-quickstart:62bc3a4e-9b6c-4da2-9fb0-145ecee0f281}
 
 Vous allez maintenant déployer vos modifications :
 
@@ -432,7 +432,7 @@ sont déjà importés, il est donc inutile (et coûteux en temps) de le faire à
 
 Vos familles sont installées sur le contexte, vous allez pouvoir consulter vos premiers formulaires.
 
-## Consultation des familles {#quickstart:21559978-8fea-4376-8b77-f0de73437efe}
+## Consultation des familles {#dynacase-quickstart:21559978-8fea-4376-8b77-f0de73437efe}
 
 Vous pouvez consulter les familles en utilisant l'interface open source de consultation par défaut `OneFam`.  
 Cette interface est un exemple d'interface possible de consultation/création de documents.
@@ -476,13 +476,13 @@ Vous pouvez créer quelques formulaires en utilisant l'interface.
 
 ![ Onefam ](30-20-onefam_audit.png "Onefam : Création")
 
-## Conclusion {#quickstart:1f4af8a5-d83c-443d-a41d-cbc1e5677af4}
+## Conclusion {#dynacase-quickstart:1f4af8a5-d83c-443d-a41d-cbc1e5677af4}
 
 Vous savez maintenant créer des familles, paramétrer la structure et les traduire.
 
 Dans les autres tutoriaux de ce chapitre vous allez apprendre à les paramétrer, en paramétrer la sécurité, en modifier les interfaces.
 
-## Voir aussi {#quickstart:226443c7-a82f-4edd-b8e1-430892fcf030}
+## Voir aussi {#dynacase-quickstart:226443c7-a82f-4edd-b8e1-430892fcf030}
 
 * [Les sources après ce chapitre][tuto_after_30_20],
 * [Définition CSV d'une famille][DocFamCSV],
@@ -495,8 +495,8 @@ Dans les autres tutoriaux de ce chapitre vous allez apprendre à les paramétrer
 [php_namespace]: http://www.php.net/manual/en/language.namespaces.rationale.php "Doc PHP : namespace"
 [DocFamCSV]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75.html "Documentation : structure du fichier de définition"
 [DocAttribut]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:4e167170-33ed-11e2-8134-a7f43955d6f3.html "Documentation : attribut"
-[annexe]:   #quickstart:69f091b6-34ef-47b0-a453-8e00676b7dcd
-[annexeColor]: #quickstart:c35b47c9-22d0-44c9-9bdd-0ddde39af53c
+[annexe]:   #dynacase-quickstart:69f091b6-34ef-47b0-a453-8e00676b7dcd
+[annexeColor]: #dynacase-quickstart:c35b47c9-22d0-44c9-9bdd-0ddde39af53c
 [DocVisibilite]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8.html "Documentation : visibilité"
 [DocDocid]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:d461d5f5-b635-47a0-944d-473c227587ab.html#core-ref:d461d5f5-b635-47a0-944d-473c227587ab "Documentation : Docid"
 [DocArray]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:dd400581-8896-4eec-9b9e-f1e5669cf180.html "Documentation : Array"
@@ -508,4 +508,4 @@ Dans les autres tutoriaux de ce chapitre vous allez apprendre à les paramétrer
 [tuto_audit_ref]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-20/COGIP_AUDIT/COGIP_AUDIT_REFERENTIEL__STRUCT.csv
 [tuto_audit_fnc]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-20/COGIP_AUDIT/COGIP_AUDIT_FNC__STRUCT.csv
 [tuto_stub]: https://github.com/Anakeen/dynacase-quick-start-code/tree/3.2-after-30-20/stubs
-[deploy_instruct]: #ddui-ref:24eb4759-95cb-4754-9940-0f1dc56ccd36
+[deploy_instruct]: #dynacase-quickstart:24eb4759-95cb-4754-9940-0f1dc56ccd36

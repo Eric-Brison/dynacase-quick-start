@@ -1,8 +1,8 @@
-# Vue {#quickstart:987d7ccf-ffb9-48f0-bb7b-4a8363ad7dbf}
+# Vue {#dynacase-quickstart:987d7ccf-ffb9-48f0-bb7b-4a8363ad7dbf}
 
 Ce chapitre va vous permettre de modifier la mise en forme des documents en modification et en consultation.
 
-## Objectifs {#quickstart:6ecad751-7d81-405f-b240-f459ca1737c1}
+## Objectifs {#dynacase-quickstart:6ecad751-7d81-405f-b240-f459ca1737c1}
 
 -   Modifier la mise en forme des attributs via les options,
 -   Utiliser une zone pour modifier la présentation du document,
@@ -10,7 +10,7 @@ Ce chapitre va vous permettre de modifier la mise en forme des documents en modi
 -   Utiliser la mise en forme d'attribut en édition et en consultation,
 -   Mettre en place un style pour modifier la présentation globale de Dynacase.
 
-## Cadre {#quickstart:288a6149-da38-4fe3-8365-9c7f0276c7c0}
+## Cadre {#dynacase-quickstart:288a6149-da38-4fe3-8365-9c7f0276c7c0}
 
 Lors de la phase de spécification et des premiers retours les demandes suivantes ont été émises.
 Certains détails pourraient être améliorés sur les formulaires :
@@ -27,7 +27,7 @@ Certains détails pourraient être améliorés sur les formulaires :
     un menu leur permettant d'éditer tous les attributs d'une fiche.
     Dans ce mode un message doit être affiché pour indiquer le mode d'édition spécial.
 
-## Théorie {#quickstart:f4f9e332-6ad1-4d5d-b986-fd592cea3c8e}
+## Théorie {#dynacase-quickstart:f4f9e332-6ad1-4d5d-b986-fd592cea3c8e}
 
 La modification des options de génération des formulaires utilise plusieurs techniques différentes :
 
@@ -41,7 +41,7 @@ La modification des options de génération des formulaires utilise plusieurs te
 -   la définition d'une [vue d'attribut][DocVueAttribut] en édition et en consultation,
     elle permet de modifier la présentation d'un ou plusieurs attributs.
 
-## Les options {#quickstart:5298b658-fe14-4adb-bda9-3b449064b7e2}
+## Les options {#dynacase-quickstart:5298b658-fe14-4adb-bda9-3b449064b7e2}
 
 Vous allez commencer par la technique la plus simple à mettre en œuvre :
 la modification des options de mise en forme des attributs.
@@ -66,13 +66,13 @@ Vous pouvez remarquer que les deux libellés _pièces jointes_ surnuméraires ne
 
 Vous pouvez retrouver le fichier mis à jour dans [les sources][tuto_audit].
 
-## Le style {#quickstart:87bae86c-a40c-4018-baea-cd72ebf85288}
+## Le style {#dynacase-quickstart:87bae86c-a40c-4018-baea-cd72ebf85288}
 
 Vous allez créer votre style.
 Un style est composé d'un fichier de définition et de fichier d'assets (css, js, [layout][DocLayout]),
 et permet de définir des règles de mise en forme valables sur un contexte.
 
-### Création des fichiers {#quickstart:bc2cd429-dac5-4f68-a277-6a68b163a8d3}
+### Création des fichiers {#dynacase-quickstart:bc2cd429-dac5-4f68-a277-6a68b163a8d3}
 
 Ajoutez un répertoire `COGIP_AUDIT` dans le répertoire `STYLE`. 
 Ensuite, ajoutez un fichier `COGIP_AUDIT.sty` dans le répertoire `COGIP_AUDIT`.
@@ -91,7 +91,7 @@ Le fichier [`.sty`][DocStyleSTY] est un fichier php, ce fichier doit contenir le
 
 Ce code indique le nom logique du style et son style parent. Dans votre cas, c'est le style par défaut de Dynacase.
 
-### Ajout des règles spécifiques {#quickstart:b2b9c27e-3648-420c-8776-e0625842b90b}
+### Ajout des règles spécifiques {#dynacase-quickstart:b2b9c27e-3648-420c-8776-e0625842b90b}
 
 Vous allez ajouter des règles spécifiques à votre nouveau style.
 
@@ -179,7 +179,7 @@ Vous pouvez trouver la liste des règles de compositions applicables dans la [do
 
 Vous pouvez retrouver le repertoire style initialisé dans [les sources][tuto_style].
 
-### Import du style {#quickstart:58893482-8ef1-45d6-9598-4ed0ff78a8db}
+### Import du style {#dynacase-quickstart:58893482-8ef1-45d6-9598-4ed0ff78a8db}
 
 Ouvrez le fichier `info.xml` et ajoutez à la fin de la procédure d'installation et d'upgrade l'instruction suivante :
 
@@ -240,15 +240,15 @@ Après déploiement, cela donne pour la date évoquée ci-dessus, en édition :
 
 ![ Audit : Date Statique ](30-60-date-S-style.png "Audit : Date Statique")
 
-## Vue d'attribut {#quickstart:070ffd40-3ff0-4cb8-86b8-4b0d63bf62ec}
+## Vue d'attribut {#dynacase-quickstart:070ffd40-3ff0-4cb8-86b8-4b0d63bf62ec}
 
 Vous allez utiliser la [vue d'attribut][DocVueAttribut].
 Celle-ci va vous permettre de mettre en forme les différentes dates de l'audit
 pour qu'elles soient présentées sur la même ligne et pas les unes en dessous des autres.
 
-### Vue d'attribut : édition {#quickstart:47a6d278-1796-43aa-9e77-e946fde7f043}
+### Vue d'attribut : édition {#dynacase-quickstart:47a6d278-1796-43aa-9e77-e946fde7f043}
 
-#### Création {#quickstart:22665c04-e3c6-447a-96f9-166d09ce29aa}
+#### Création {#dynacase-quickstart:22665c04-e3c6-447a-96f9-166d09ce29aa}
 
 Vous allez commencer par la [vue d'édition][DocVueAttrEdit].
 
@@ -301,7 +301,7 @@ qui sinon seraient représentés deux fois.
 
 Vous pouvez retrouver les fichier complété dans [les sources][tuto_audit_edit].
 
-#### Enregistrement {#quickstart:bb5c90dd-8f71-4532-9031-027065b796dd}
+#### Enregistrement {#dynacase-quickstart:bb5c90dd-8f71-4532-9031-027065b796dd}
 
 Ouvrez le fichier `./COGIP_AUDIT/COGIP_AUDIT_AUDIT__STRUCT.csv` et ajoutez les options suivantes :
 
@@ -319,9 +319,9 @@ Une fois le paquet déployé, vous obtenez en édition sur les documents d'audit
 <span class="flag inline nota-bene"></span> Le nom du fichier du fichier doit-être en minuscule et celui dans l'options
 `edittemplate` et `viewtemplate` n'est pas sensible à la casse.
 
-### Vue d'attribut : consultation {#quickstart:7dc65009-e511-408d-9c7a-fcb14b11f0a8}
+### Vue d'attribut : consultation {#dynacase-quickstart:7dc65009-e511-408d-9c7a-fcb14b11f0a8}
 
-#### Création {#quickstart:d472fab6-1baa-47c0-8b05-68c59e774912}
+#### Création {#dynacase-quickstart:d472fab6-1baa-47c0-8b05-68c59e774912}
 
 Vous allez maintenant customiser la [vue de consultation][DocVueAttrView].
 
@@ -374,7 +374,7 @@ Veuillez le compléter comme ci-dessous :
 
 Vous pouvez retrouver les fichier complété dans [les sources][tuto_audit_view].
 
-#### Enregistrement {#quickstart:4d3b485d-8341-43ed-ac71-b5479b28401f}
+#### Enregistrement {#dynacase-quickstart:4d3b485d-8341-43ed-ac71-b5479b28401f}
 
 Ouvrez le fichier `./COGIP_AUDIT/COGIP_AUDIT_AUDIT__STRUCT.csv` et ajoutez les options suivantes :
 
@@ -391,7 +391,7 @@ Vous pouvez retrouver le fichier mis à jour dans [les sources][tuto_audit].
 <span class="flag inline nota-bene"></span> Le nom du fichier du fichier doit-être en minuscule et celui dans l'options
 `edittemplate` et `viewtemplate` n'est pas sensible à la casse.
 
-## Vue de rangée de tableau {#quickstart:6393dae9-7911-46c7-a687-466ea623d18b}
+## Vue de rangée de tableau {#dynacase-quickstart:6393dae9-7911-46c7-a687-466ea623d18b}
 
 Vous allez maintenant créer une [vue de rangée de tableau][DocVueRangeeTableau].
 Cette vue va vous permettre d'organiser différemment la présentation des lignes d'un tableau.
@@ -458,7 +458,7 @@ Après le déploiement du paquet, le tableau est présenté de la manière suiva
 
 ![ FNC : tableau mis en forme ](30-60-rowviewzone.png "FNC : tableau mis en forme")
 
-## Vue de document {#quickstart:13421fec-a139-4c0f-b80d-caa48e43e586}
+## Vue de document {#dynacase-quickstart:13421fec-a139-4c0f-b80d-caa48e43e586}
 
 Vous allez finir ce chapitre en mettant en place une vue de document pour l'édition.
 
@@ -474,7 +474,7 @@ Une vue est composée de deux éléments :
 -   un template : un fichier contenant la définition de la vue et son contenu,
 -   un contrôleur : une méthode PHP qui est exécutée avant le rendu du template.
 
-### Création de la vue {#quickstart:49a0cb20-6b1c-4217-ab83-2932c7a5910b}
+### Création de la vue {#dynacase-quickstart:49a0cb20-6b1c-4217-ab83-2932c7a5910b}
 
 Vous allez commencer par ajouter le fichier de template.
 Ajoutez un fichier `edit_admin.xml` dans le répertoire `./COGIP_AUDIT/Layout/`.
@@ -566,7 +566,7 @@ Vous pouvez remarquer les points suivants :
 -   l'utilisation de `$this->lay->set("DOCUMENT", "…")` dans le contrôleur de la vue : c'est lui qui va remplacer
     `[DOCUMENT]` dans le template par le contenu généré.
 
-### Ajout du menu {#quickstart:ff4ad8c7-af92-4467-87dc-776f819bf961}
+### Ajout du menu {#dynacase-quickstart:ff4ad8c7-af92-4467-87dc-776f819bf961}
 
 Vous allez maintenant ajouter le menu.
 
@@ -604,7 +604,7 @@ et modifiez la colonne `M` (phpfunc) pour l'attribut `cab_menu_admin_edit` en la
 
 Vous pouvez retrouver le fichier mis à jour dans [les sources][tuto_struct_base].
 
-### Résultat {#quickstart:74785b78-5688-4118-ad87-da23df9ceaaf}
+### Résultat {#dynacase-quickstart:74785b78-5688-4118-ad87-da23df9ceaaf}
 
 Une fois le paquet déployé et si l'utilisateur connecté est administrateur, un menu supplémentaire est affiché.
 
@@ -620,19 +620,19 @@ Vous pouvez remarquer dans cette vue :
 -   le champ rédacteur qui normalement est en `S` (non modifiable) et passé en `W` (modifiable)
     et est donc modifiable par l'administrateur fonctionnel.
 
-## Mise en place des modifications {#ddui-ref:1b931b47-eb68-471c-a62b-d2c86cc54b24}
+## Mise en place des modifications {#dynacase-quickstart:1b931b47-eb68-471c-a62b-d2c86cc54b24}
 
 Vous allez maintenant déployer vos modifications :
 
     <devtool> deploy --target quickstart
 
-## Conclusion {#quickstart:eeb14f31-c61d-4502-a8ab-7cf9b1044a4e}
+## Conclusion {#dynacase-quickstart:eeb14f31-c61d-4502-a8ab-7cf9b1044a4e}
 
 Dans ce chapitre vous avez expérimenté les principales techniques de modifications d'interface.
 Vous avez pu constater que le formulaire est facilement modifiable,
 à la fois dans les détails de mise en forme et dans son fonctionnement.
 
-## Voir aussi {#quickstart:5e6dd852-671f-4dc8-ac40-6197cb950c93}
+## Voir aussi {#dynacase-quickstart:5e6dd852-671f-4dc8-ac40-6197cb950c93}
 
 -   [Les sources après ce chapitre][tuto_zip],
 -   le [style][DocStyle],
@@ -646,7 +646,7 @@ Vous avez pu constater que le formulaire est facilement modifiable,
 <!-- links -->
 
 [DocAttrOptions]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496.html#core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496 "Documentation : options"
-[QuickStartHook]: #quickstart:bb25d5ff-d5a6-4d26-b32a-26db45de88e7
+[QuickStartHook]: #dynacase-quickstart:bb25d5ff-d5a6-4d26-b32a-26db45de88e7
 [DocZoneDocumentaire]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cb3e2b97-ee6d-4cdf-aa25-b2e41d0d3156.html#core-ref:49b96dc9-64e9-4f5a-a167-396282625c1e "Documentation : Zone documentaire"
 [DocVueRangeeTableau]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:9e76ac49-3b17-435b-ba25-a7122369be85.html#core-ref:9e76ac49-3b17-435b-ba25-a7122369be85 "Documentation : Vue de rangée de tableau"
 [DocVueAttribut]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:26dca29e-92b3-445f-a6d8-51eaa297219a.html#core-ref:26dca29e-92b3-445f-a6d8-51eaa297219a "Documentation : Vue d'attribut"
@@ -665,4 +665,4 @@ Vous avez pu constater que le formulaire est facilement modifiable,
 [tuto_edit_admin]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-60/COGIP_AUDIT/Layout/edit_admin.xml
 [tuto_class_base]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-60/COGIP_AUDIT/COGIP_AUDIT_BASE__CLASS.php#L32-L106
 [tuto_struct_base]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-60/COGIP_AUDIT/COGIP_AUDIT_BASE__STRUCT.csv#L5
-[deploy_instruct]: #quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e
+[deploy_instruct]: #dynacase-quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e

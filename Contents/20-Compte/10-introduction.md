@@ -1,4 +1,4 @@
-# La gestion des utilisateurs {#quickstart:7c5b312e-42cf-44e2-b68f-9ddce9b48d71}
+# La gestion des utilisateurs {#dynacase-quickstart:7c5b312e-42cf-44e2-b68f-9ddce9b48d71}
 
 Dans Dynacase, la gestion des utilisateurs utilise la notion de _compte_ (_account_ dans la
 documentation de référence). Les comptes se répartissent en trois catégories :

@@ -1,9 +1,9 @@
-# Paramétrage {#quickstart:b5501068-3412-4849-a1ac-4155272da2ad}
+# Paramétrage {#dynacase-quickstart:b5501068-3412-4849-a1ac-4155272da2ad}
 
 Dans ce chapitre, vous allez paramétrer les familles que vous avez créées
 dans le [chapitre précédent, "Mise en place des structures"][structure].
 
-## Objectifs  {#quickstart:9fd3067d-5851-4306-9e1a-13eb626417d8}
+## Objectifs  {#dynacase-quickstart:9fd3067d-5851-4306-9e1a-13eb626417d8}
 
 * Mise en place des propriétés des familles,
 * Mise en place du code métier :
@@ -12,7 +12,7 @@ dans le [chapitre précédent, "Mise en place des structures"][structure].
     * Attributs calculés,
     * Contraintes.
 
-## Cadre {#quickstart:fc3a144d-e608-4538-aa71-808075b1860b}
+## Cadre {#dynacase-quickstart:fc3a144d-e608-4538-aa71-808075b1860b}
 
 Lors de la phase de spécification, les éléments suivants ont été identifiés.
 Votre application nécessite les comportements suivants :
@@ -37,7 +37,7 @@ Votre application nécessite les comportements suivants :
     -   L'attribut titre est obligatoire,
     -   L'attribut lien vers l'audit est obligatoire.
 
-## Théorie et fichiers mis en œuvre {#quickstart:6db003ec-41fb-416e-a19a-94488774070e}
+## Théorie et fichiers mis en œuvre {#dynacase-quickstart:6db003ec-41fb-416e-a19a-94488774070e}
 
 Le paramétrage des familles de Dynacase comprend tout ce qui est lié à la personnalisation du fonctionnement des familles.
 Les différents éléments paramétrables sont :
@@ -66,7 +66,7 @@ vous devez reconstruire celui-ci et le déployer pour voir les modifications s'a
 <span class="flag inline nota-bene"></span> Les annexes contiennent un chapitre [développement rapide][devRapide]
 qui résume quelques techniques permettant d'accélérer le développement en évitant de déployer à chaque modification.
 
-## Propriétés des familles {#quickstart:d73e0224-f9f4-445a-a828-069cbc468053}
+## Propriétés des familles {#dynacase-quickstart:d73e0224-f9f4-445a-a828-069cbc468053}
 
 Commencez par les propriétés des familles. 
 
@@ -81,7 +81,7 @@ Deux paramètres ont été remplis par le **developper tool** :
 -   `ICON` : désigne une image qui est utilisée comme icône pour cette famille dans les interfaces standards,
 -   `DFLDID` : cette propriété est utilisée par l'interface par défaut `ONEFAM` pour identifier les familles à afficher.
 
-### Icône {#quickstart:486c3a7e-2471-4cc4-8633-44ce5203c1fe}
+### Icône {#dynacase-quickstart:486c3a7e-2471-4cc4-8633-44ce5203c1fe}
 
 L'image de l’icône doit être ajoutée dans le répertoire `Images` à la racine du contexte.
 Vous devez donc créer dans vos sources un répertoire `Images` et ajouter une image.
@@ -101,7 +101,7 @@ Vous pouvez retrouver l'ensemble des images de l'application sur [github][tuto_i
 
 ![ Famille avec icônes ](30-30-with-title.png "Famille avec icônes")
 
-### Titre de famille {#quickstart:dfcd3737-1642-449f-9986-28bbbd4bccdb}
+### Titre de famille {#dynacase-quickstart:dfcd3737-1642-449f-9986-28bbbd4bccdb}
 
 Le titre de la famille se paramètre via les traductions.
 Ouvrez le fichier `locale/fr/LC_MESSAGES/src/COGIP_AUDIT_AUDIT.po` et modifiez le bloc suivant :
@@ -130,7 +130,7 @@ cette mention doit être supprimée pour que la traduction soit prise en compte.
 
 Vous pouvez retrouver les po complétés sur [github][tuto_po].
 
-### Valeur par défaut {#quickstart:b48d21a1-1305-407c-a2bc-aebca7315416}
+### Valeur par défaut {#dynacase-quickstart:b48d21a1-1305-407c-a2bc-aebca7315416}
 
 Dans les fiches de non-conformité, le rédacteur est le créateur de la fiche.
 
@@ -162,7 +162,7 @@ pour mettre `S` dans la colonne `I`. Cela indique que l'attribut est statique et
 
 Vous pouvez retrouver le fichier complété dans [les sources][tuto_struct_fnc].
 
-## Attribut obligatoire {#quickstart:2654ac63-6c63-4daa-a107-8bb9e50c70c0}
+## Attribut obligatoire {#dynacase-quickstart:2654ac63-6c63-4daa-a107-8bb9e50c70c0}
 
 Votre spécification indique que certains attributs sont obligatoires.
 
@@ -184,7 +184,7 @@ Complétez ensuite les autres familles :
 
 Vous pouvez retrouver les familles complétées dans les [sources][tuto_fam].
 
-## Calcul des titres des documents {#quickstart:66cc3713-6e43-4e45-916e-82d29c016d05}
+## Calcul des titres des documents {#dynacase-quickstart:66cc3713-6e43-4e45-916e-82d29c016d05}
 
 Il existe deux moyens de spécifier les règles de calcul de titre d'un document :
 
@@ -195,7 +195,7 @@ Il existe deux moyens de spécifier les règles de calcul de titre d'un document
 -   soit en modifiant la méthode [`getCustomTitle`][DocGetCustomTitle] dans ce cas vous composez directement le titre.
     La colonne `E` n'est plus utilisée.
 
-### Composition du titre par paramétrage de la structure {#quickstart:d3a65d4a-67d4-42dd-9b11-23a41ee3f5c7}
+### Composition du titre par paramétrage de la structure {#dynacase-quickstart:d3a65d4a-67d4-42dd-9b11-23a41ee3f5c7}
 
 Ouvrez le fichier `./COGIP_AUDIT/COGIP_AUDIT_REFERENTIEL__STRUCT.csv` et modifiez le pour qu'il soit similaire à :
 
@@ -207,7 +207,7 @@ Ce qui donne après la création du document :
 
 Vous pouvez retrouver le fichier complété dans [les sources][tuto_struct_ref].
 
-### Composition du titre en utilisant `getCustomTitle` {#quickstart:7afe120f-3249-48a1-af92-7bd52b4ff837}
+### Composition du titre en utilisant `getCustomTitle` {#dynacase-quickstart:7afe120f-3249-48a1-af92-7bd52b4ff837}
 
 Pour les autres familles, vous ne pouvez pas utiliser la même méthode car soit le titre contient un lien vers un attribut,
 soit il est composé avec des éléments qui ne sont pas directement dans le document.
@@ -255,7 +255,7 @@ Ouvrez le fichier `./COGIP_AUDIT/COGIP_AUDIT_FNC__CLASS.php` et surchargez la m�
 
 Vous pouvez retrouver le fichier complété dans [les sources][tuto_class_fnc].
 
-### Paramètre de famille {#quickstart:534a6d71-a5f5-4cc0-8a6d-c44275ae9937}
+### Paramètre de famille {#dynacase-quickstart:534a6d71-a5f5-4cc0-8a6d-c44275ae9937}
 
 Vous allez maintenant construire le titre pour la famille audit. Ce titre est composé de deux parties :
 
@@ -275,7 +275,7 @@ Sa valeur est modifiable dans les interfaces d'administration sans nouveau dépl
 
 Vous pouvez retrouver les sources complétées dans les [sources][tuto_fam].
 
-### Composition du titre avec un paramètre de famille {#quickstart:fc2ad726-7db2-4bed-a759-f0f49f7163cc}
+### Composition du titre avec un paramètre de famille {#dynacase-quickstart:fc2ad726-7db2-4bed-a759-f0f49f7163cc}
 
 Ouvrez le fichier `./COGIP_AUDIT/COGIP_AUDIT_AUDIT__CLASS.php` et surchargez la méthode [`getCustomTitle`][DocGetCustomTitle] :
 
@@ -301,7 +301,7 @@ Ce qui donne, après déploiement :
 
 Bravo ! Vous avez mis en place le calcul des titres des documents.
 
-## Mise en place des contraintes {#quickstart:ec7f3353-9d8f-4813-adda-ab1a964e2760}
+## Mise en place des contraintes {#dynacase-quickstart:ec7f3353-9d8f-4813-adda-ab1a964e2760}
 
 Vous allez maintenant paramétrer la [contrainte][DocDocContrainte] nécessaire à votre projet.
 
@@ -361,7 +361,7 @@ Pour l'instant cette contrainte est très limitante, en effet elle s’exécute 
 
 Vous verrez dans le chapitre sur les cycles de vie différents moyens d'améliorer cette contrainte.
 
-## Configuration des aides à la saisie {#quickstart:4678ab4e-c5bf-4dae-b446-611baad5e225}
+## Configuration des aides à la saisie {#dynacase-quickstart:4678ab4e-c5bf-4dae-b446-611baad5e225}
 
 Vous allez maintenant configurer une [aide à la saisie][DocDocHelper].  
 La spécification indique que dans une fiche de non-conformité les référentiels accessibles sont ceux référencés par l'audit associé à la fiche.
@@ -369,7 +369,7 @@ La spécification indique que dans une fiche de non-conformité les référentie
 <span class="flag inline nota-bene"></span> Une aide à la saisie est dans un fichier autonome car elle peut-être utilisée
 au sein de plusieurs famille différentes.
 
-### Fonction {#quickstart:3af954c1-fba1-4899-934e-2de89965e9f4}
+### Fonction {#dynacase-quickstart:3af954c1-fba1-4899-934e-2de89965e9f4}
 
 Ajoutez un fichier `helper_audit.php` dans le répertoire `EXTERNALS` et ajoutez dans celui-ci la fonction `selectReferentiel` comme ci-dessous :
 
@@ -453,7 +453,7 @@ Tout document possède plusieurs moyens d'être identifié :
 
 Vous pouvez retrouver les aides à la saisie complétées dans les [sources][tuto_external].
 
-### Paramétrage {#quickstart:dd771ea3-deb6-4d78-991a-236caed4b347}
+### Paramétrage {#dynacase-quickstart:dd771ea3-deb6-4d78-991a-236caed4b347}
 
 Vous allez maintenant référencer cette aide à la saisie dans la famille.
 Ouvrez le fichier `./COGIP_AUDIT/COGIP_AUDIT_FNC__STRUCT.csv` et ajoutez dans les colonnes `L` et `M` les valeurs suivantes :
@@ -478,11 +478,11 @@ pour construire la liste de suggestion présentée à l'utilisateur.
 
 Vous pouvez retrouver le paramétrage complété dans les [sources][tuto_fnc_struct].
 
-### Résultat {#quickstart:ac23551e-7fc5-4f92-b6dd-7d97c11cbb6e}
+### Résultat {#dynacase-quickstart:ac23551e-7fc5-4f92-b6dd-7d97c11cbb6e}
 
 ![ Aide à la saisie : résultat ](30-30-helper-result.gif " Aide à la saisie : résultat")
 
-### Exemple {#quickstart:fb944e8e-6327-4ea9-8e95-9d45ceeb5624}
+### Exemple {#dynacase-quickstart:fb944e8e-6327-4ea9-8e95-9d45ceeb5624}
 
 Ci-dessous, un autre exemple d'aide à la saisie.
 Il concerne toujours les Fiche de non-conformité, les chapitres présentés doivent être ceux du référentiels en cours.
@@ -536,7 +536,7 @@ Et complétez le fichier `./COGIP_AUDIT/COGIP_AUDIT_FNC__STRUCT.csv` :
 
 Vous pouvez retrouver les sources complétées dans les [sources][tuto_fam].
 
-## Attributs calculés {#quickstart:ead89bc8-c1ce-4522-8d19-6e2d8d0dfd50}
+## Attributs calculés {#dynacase-quickstart:ead89bc8-c1ce-4522-8d19-6e2d8d0dfd50}
 
 Pour finir ce chapitre, vous allez mettre en place un attribut calculé.
 La date de fin de l'audit doit être calculée en fonction de sa date de début et de sa durée.
@@ -580,7 +580,7 @@ Vous pouvez retrouver le fichier CSV complété dans les [sources][tuto_struct_a
 
 Bravo ! Vous avez terminé la partie pratique de ce chapitre.
 
-## Mise en place des modifications {#ddui-ref:acf98975-1c63-48d2-aa06-7a480102e990}
+## Mise en place des modifications {#dynacase-quickstart:acf98975-1c63-48d2-aa06-7a480102e990}
 
 Vous allez maintenant déployer vos modifications :
 
@@ -588,7 +588,7 @@ Vous allez maintenant déployer vos modifications :
 
 Vous pouvez ensuite créer quelques formulaires pour voir les modifications que vous avez mises en place.
 
-## Conclusion {#quickstart:8a58c628-904c-46ea-914a-f592438059c5}
+## Conclusion {#dynacase-quickstart:8a58c628-904c-46ea-914a-f592438059c5}
 
 Ce chapitre de paramétrage vous a permis de rendre votre formulaire plus interactif et d'y intégrer plus de logique métier.
 
@@ -597,7 +597,7 @@ Dans les chapitres suivants, vous allez continuer à améliorer celui-ci notamme
 -   en ajoutant des règles métier grâce aux hooks
 -   et en améliorant l'interface générée.
 
-## Voir aussi {#quickstart:3cd0df89-9a45-46a6-86de-3d218619b8bd}
+## Voir aussi {#dynacase-quickstart:3cd0df89-9a45-46a6-86de-3d218619b8bd}
 
 -   [Les sources après ce chapitre][tuto_after_30_30],
 -   [Principales méthodes de la classe Doc][DocMethodClassDoc],
@@ -609,10 +609,10 @@ Dans les chapitres suivants, vous allez continuer à améliorer celui-ci notamme
 
 <!-- links -->
 
-[devRapide]:    #quickstart:c4eef86b-1f5d-4fd1-b362-d78c8fa637eb
-[i18n]:     #quickstart:989b4a9e-e3d8-475e-9dcf-9a158605eab6
-[stubs]:    #quickstart:df9b59b1-3a7f-420b-a89d-36cd6894edb9
-[structure]:   #quickstart:3b64d38f-81aa-4c02-aad5-77271247bf15
+[devRapide]:    #dynacase-quickstart:c4eef86b-1f5d-4fd1-b362-d78c8fa637eb
+[i18n]:     #dynacase-quickstart:989b4a9e-e3d8-475e-9dcf-9a158605eab6
+[stubs]:    #dynacase-quickstart:df9b59b1-3a7f-420b-a89d-36cd6894edb9
+[structure]:   #dynacase-quickstart:3b64d38f-81aa-4c02-aad5-77271247bf15
 [famProperty]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75.html#core-ref:6f013eb8-33c7-11e2-be43-373b9514dea3 "Documentation : propriété de famille"
 [DocValDefault]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75.html#core-ref:94fa51e2-3488-11e2-9e34-1f7c912168cf "Documentation : valeur par défaut"
 [DocVisibilite]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8.html "Documentation : visibilité"
@@ -644,4 +644,4 @@ Dans les chapitres suivants, vous allez continuer à améliorer celui-ci notamme
 [tuto_class_audit]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__CLASS.php
 [tuto_class_fnc]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-30/COGIP_AUDIT/COGIP_AUDIT_FNC__CLASS.php#L14-L22
 [tuto_struct_audit]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__STRUCT.csv#L7
-[deploy_instruct]: #quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e
+[deploy_instruct]: #dynacase-quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e

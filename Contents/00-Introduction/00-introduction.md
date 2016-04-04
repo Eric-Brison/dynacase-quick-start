@@ -1,6 +1,6 @@
-# Introduction {#quickstart:744282c8-96a2-44da-8daf-e68ae60b5960}
+# Introduction {#dynacase-quickstart:744282c8-96a2-44da-8daf-e68ae60b5960}
 
-## Présentation et objectif {#quickstart:a11031ce-6591-46fa-b005-fb757717dd53}
+## Présentation et objectif {#dynacase-quickstart:a11031ce-6591-46fa-b005-fb757717dd53}
 
 Ce document est le tutoriel de la plateforme Dynacase. 
 
@@ -40,7 +40,7 @@ Elles alternent parties théoriques et applications pratiques. Les parties prati
 ou peuvent être basées sur votre propre projet.  
 Elles se déroulent en inter entreprise sur Paris ou Toulouse ou en intra sur votre site.
 
-## Organisation {#quickstart:f6b3c074-0249-4a60-bbb2-0778b6a8778b}
+## Organisation {#dynacase-quickstart:f6b3c074-0249-4a60-bbb2-0778b6a8778b}
 
 Ce tutoriel est organisé en 5 chapitres principaux :
 
@@ -56,7 +56,7 @@ Chaque chapitre est composé de sous chapitres. Un sous chapitre est écrit pour
 
 L'[annexe][chapter_annexe] résume quelques points clefs.
 
-## Au secours {#ddui-ref:da00d85f-7d42-48bc-9f7a-3162d6fe2c5a}
+## Au secours {#dynacase-quickstart:da00d85f-7d42-48bc-9f7a-3162d6fe2c5a}
 
 Pour trouver des aides sur la réalisation du tutorial vous pouvez utiliser le [forum Dynacase][forum_dynacase].
 
@@ -68,7 +68,7 @@ Il vous suffit de cliquer dessus.
 
 D'autre part, si vous avez des remarques ou si vous souhaitez compléter ce tutoriel, nous vous invitons à nous les partager via  [Github][quickstart_repo].
 
-## Contexte Fonctionnel {#quickstart:1b340f92-085a-4bbe-a866-47e17444ca51}
+## Contexte Fonctionnel {#dynacase-quickstart:1b340f92-085a-4bbe-a866-47e17444ca51}
 
 Vous êtes nouvellement embauché au sein du service informatique de la société [COGIP][COGIP].
 
@@ -99,12 +99,12 @@ Votre responsable hiérarchique vous a donc confié ce développement. Vous avez
 <!-- links -->
 [anakeen_services]: http://anakeen.com/#services
 [COGIP]: http://fr.wikipedia.org/wiki/COGIP
-[chapter_dev]: #quickstart:354d4c0e-3386-47fb-b79c-4ea19e3cd5d9
-[chapter_account]: #quickstart:7c5b312e-42cf-44e2-b68f-9ddce9b48d71
-[chapter_fam]: #quickstart:f43b95f5-71d4-4c40-bd28-3fff24a3261f
-[chapter_wfl]: #quickstart:64fac308-94ce-4717-96c7-56e2336c7791
-[chapter_action]: #quickstart:3e7da180-3454-4344-a8a1-73f958365aa5
-[chapter_annexe]: #quickstart:f032dd5b-a7dc-47f7-b216-6a973a447dfd
+[chapter_dev]: #dynacase-quickstart:354d4c0e-3386-47fb-b79c-4ea19e3cd5d9
+[chapter_account]: #dynacase-quickstart:7c5b312e-42cf-44e2-b68f-9ddce9b48d71
+[chapter_fam]: #dynacase-quickstart:f43b95f5-71d4-4c40-bd28-3fff24a3261f
+[chapter_wfl]: #dynacase-quickstart:64fac308-94ce-4717-96c7-56e2336c7791
+[chapter_action]: #dynacase-quickstart:3e7da180-3454-4344-a8a1-73f958365aa5
+[chapter_annexe]: #dynacase-quickstart:f032dd5b-a7dc-47f7-b216-6a973a447dfd
 [forum_dynacase]: http://forum.dynacase.org/
 [forum_dynacase_qs]: http://forum.dynacase.org/viewforum.php?id=23
 [quickstart_repo]: https://github.com/Anakeen/dynacase-quick-start
