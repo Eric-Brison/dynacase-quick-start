@@ -1,4 +1,4 @@
-# Action {#quickstart:3e7da180-3454-4344-a8a1-73f958365aa5}
+# Action {#dynacase-qs:3e7da180-3454-4344-a8a1-73f958365aa5}
 
 Une [action][DocIntroAction] permet d'étendre les fonctionnalités de Dynacase. Vous pouvez :
 

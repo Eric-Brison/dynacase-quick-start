@@ -1,11 +1,11 @@
-# Sécurité des cycles de vie {#quickstart:440ada84-6adb-4acc-94be-5d9f42a71ec3}
+# Sécurité des cycles de vie {#dynacase-qs:440ada84-6adb-4acc-94be-5d9f42a71ec3}
 
-## Objectifs {#quickstart:8b745aaa-bfd5-4f2d-885c-f6aa27d82a7b}
+## Objectifs {#dynacase-qs:8b745aaa-bfd5-4f2d-885c-f6aa27d82a7b}
 
 -   Mettre en place les autorisations de transition,
 -   Mettre en place les profils par étape.
 
-## Cadre {#quickstart:1b96d939-42fb-434a-9379-08d8c7e365a6}
+## Cadre {#dynacase-qs:1b96d939-42fb-434a-9379-08d8c7e365a6}
 
 Lors de la phase d'analyse, les points suivants ont été relevés :
 
@@ -38,7 +38,7 @@ Lors de la phase d'analyse, les points suivants ont été relevés :
         -   _Modifier_ : Personne,
         -   _Supprimer_ : Personne,
 
-## Théorie {#quickstart:8a31ac4f-7f7c-4d51-bc95-261272893958}
+## Théorie {#dynacase-qs:8a31ac4f-7f7c-4d51-bc95-261272893958}
 
 Le paramétrage des droits associés à un cycle de vie sont de deux natures.
 
@@ -47,7 +47,7 @@ Le paramétrage des droits associés à un cycle de vie sont de deux natures.
 -   Des profil associés au document lors des changement d'étape.
     Ces profils permettent de définir qui peut voir, modifier, supprimer le document.
 
-## Profilage du cycle {#quickstart:bba49d4c-8ea4-4cd3-a064-f8c006c9ef1c}
+## Profilage du cycle {#dynacase-qs:bba49d4c-8ea4-4cd3-a064-f8c006c9ef1c}
 
 Vous allez commencer par profiler le document cycle de vie,
 ce qui va vous permettre de définir quel type d'utilisateur peut effectuer quelle transition.
@@ -85,15 +85,15 @@ Et cliquez sur `Modifier les privilèges`.
 Votre cycle est maintenant profilé.
 La liste des transitions présentée sur le document tient compte du profil de la personne connectée.
 
-## Profil des étapes {#quickstart:99be7d83-d8c0-407f-894a-b44e1df6bfa4}
+## Profil des étapes {#dynacase-qs:99be7d83-d8c0-407f-894a-b44e1df6bfa4}
 
 Vous allez maintenant ajouter des profils de document au différentes étapes.
 
-### Création des profils {#quickstart:88533bb0-692a-4d4e-a61d-d5fbc29a4e78}
+### Création des profils {#dynacase-qs:88533bb0-692a-4d4e-a61d-d5fbc29a4e78}
 
 Vous allez commencer par créer les profils. 
 
-#### Profil : Brouillon {#quickstart:30ab6e0d-632d-4011-a546-dbac1c9b76fe}
+#### Profil : Brouillon {#dynacase-qs:30ab6e0d-632d-4011-a546-dbac1c9b76fe}
 
 Cliquez sur `Création > Profil`. Remplissez les valeurs suivantes :
 
@@ -112,7 +112,7 @@ Cliquez sur `Modifier les privilèges`.
 
 Ajoutez le nom logique `Autres > Propriétés` : `PDOC_AUDIT_BROUILLON`.
 
-#### Profil : Planifié {#quickstart:7589a8f6-4975-431a-94b9-cf0d879bc127}
+#### Profil : Planifié {#dynacase-qs:7589a8f6-4975-431a-94b9-cf0d879bc127}
 
 Cliquez sur `Création > Profil`. Remplissez les valeurs suivantes :
 
@@ -131,7 +131,7 @@ Cliquez sur `Modifier les privilèges`.
 
 Ajoutez le nom logique `Autres > Propriétés` : `PDOC_AUDIT_PLANIFIE`.
 
-#### Profil : Désactivé {#quickstart:24afdcf5-a615-4ede-a14f-437847d12fe6}
+#### Profil : Désactivé {#dynacase-qs:24afdcf5-a615-4ede-a14f-437847d12fe6}
 
 Cliquez sur `Création > Profil`. Remplissez les valeurs suivantes :
 
@@ -153,7 +153,7 @@ Ajoutez le nom logique `Autres > Propriétés` : `PDOC_AUDIT_DISABLED`.
 <span class="flag inline nota-bene"></span>
 Un seul profil est créé et utilisé pour tous les états où le document est désactivé (_Annulé_, _Certifié_, _Refusé_).
 
-### Affectation des profils {#quickstart:24184161-6f14-4cde-bfaf-9868a84657fe}
+### Affectation des profils {#dynacase-qs:24184161-6f14-4cde-bfaf-9868a84657fe}
 
 Allez dans l'application `Gestion des documents > Explorateur de documents` cliquez ensuite sur `les cycles`
 et sélectionnez le cycle `Audit Audit`.
@@ -174,7 +174,7 @@ Vous obtenez le document suivant :
 __Attention__ les profils ne sont affectés au document qu'à l'arrivée dans l'étape.
 Si des documents sont déjà dans cette étape alors le profil n'est pas affecté.
 
-## Exportation {#quickstart:5d73ab75-ffa4-4509-8efc-32b3073bcfea}
+## Exportation {#dynacase-qs:5d73ab75-ffa4-4509-8efc-32b3073bcfea}
 
 Utilisez la procédure décrite dans le [chapitre précédent][ExportCycle].
 
@@ -184,7 +184,7 @@ Vous devez obtenir un fichier `./COGIP_AUDIT/COGIP_AUDIT_AUDIT__PARAM.csv` sembl
 
 Vous pouvez trouver le fichier complété dans [les sources][tuto_audit_param].
 
-## Mise en place des modifications {#ddui-ref:211833c4-a5e7-4685-a14e-8b52f634417c}
+## Mise en place des modifications {#dynacase-qs:211833c4-a5e7-4685-a14e-8b52f634417c}
 
 Vous allez maintenant déployer vos modifications :
 
@@ -192,12 +192,12 @@ Vous allez maintenant déployer vos modifications :
 
 Vous pouvez ensuite consulter les modifications apportées via l'application `http://<nomDeDomaine>/dynacase/`.
 
-## Conclusion {#quickstart:c4e5ebfa-74b7-4565-819d-34537af6317e}
+## Conclusion {#dynacase-qs:c4e5ebfa-74b7-4565-819d-34537af6317e}
 
 Vous savez maintenant paramétrer les éléments de sécurité associés au cycle de vie.
 Vous pouvez définir qui peut effectuer quelle transition et qui peut _voir_/_modifier_/_supprimer_ les documents suivant l'étape.
 
-## Voir aussi {#quickstart:44b393d1-c6ad-448b-997d-e9cc1d47fd89}
+## Voir aussi {#dynacase-qs:44b393d1-c6ad-448b-997d-e9cc1d47fd89}
 
 -   [Les sources après ce chapitre][tuto_zip],
 -   [Import profil cycle de vie][DocCSVWFL],
@@ -207,8 +207,8 @@ Vous pouvez définir qui peut effectuer quelle transition et qui peut _voir_/_mo
 
 [DocProfilDocument]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:a99dcc5f-f42f-4574-bbfa-d7bb0573c95d.html#core-ref:f1575705-10e8-4bf2-83b3-4c0b5bfb77cf "Documentation : profil de document"
 [DocCSVWFL]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:e0d99925-df0d-4d51-8ebc-d44c4dd03873.html#core-ref:e0d99925-df0d-4d51-8ebc-d44c4dd03873 "Documentation : Import cycle de vie"
-[ParamDroit]: #quickstart:1cd2c714-d287-4ca6-8282-c5a20393c0ea
-[ExportCycle]: #quickstart:6633ab3c-ab35-48ad-93a9-71898bfad9f3
+[ParamDroit]: #dynacase-qs:1cd2c714-d287-4ca6-8282-c5a20393c0ea
+[ExportCycle]: #dynacase-qs:6633ab3c-ab35-48ad-93a9-71898bfad9f3
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-40-40.zip
 [tuto_audit_param]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-40-40/COGIP_AUDIT/COGIP_AUDIT_AUDIT__PARAM.csv#L4-L13
-[deploy_instruct]: #quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e
+[deploy_instruct]: #dynacase-qs:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e

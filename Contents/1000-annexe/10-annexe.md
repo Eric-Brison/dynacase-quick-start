@@ -1,8 +1,8 @@
-# Annexe {#quickstart:f032dd5b-a7dc-47f7-b216-6a973a447dfd}
+# Annexe {#dynacase-qs:f032dd5b-a7dc-47f7-b216-6a973a447dfd}
 
 Ce chapitre contient différent éléments de références qui sont applicables pour tous les tutoriels.
 
-## CSV {#quickstart:f32d9a77-43b1-4f10-b225-22daa1e0ba1b}
+## CSV {#dynacase-qs:f32d9a77-43b1-4f10-b225-22daa1e0ba1b}
 
 Le format standard de CSV de Dynacase est :
 
@@ -12,7 +12,7 @@ Le format standard de CSV de Dynacase est :
 
 Ce format est valide pour l'import et pour l'export des documents et des familles avec l'action `importDocuments`.
 
-## Conventions de nommage {#quickstart:69f091b6-34ef-47b0-a453-8e00676b7dcd}
+## Conventions de nommage {#dynacase-qs:69f091b6-34ef-47b0-a453-8e00676b7dcd}
 
 Module :
 
@@ -45,7 +45,7 @@ Avec les éléments suivants :
     -   `<APPLICATION>`/action.`<action_name>`.php : Fichier de contrôleur d'une action,
     -   `<APPLICATION>`/Layout/`<action_name`.html : Template HTML d'une action.
 
-## Script open office {#quickstart:c35b47c9-22d0-44c9-9bdd-0ddde39af53c}
+## Script open office {#dynacase-qs:c35b47c9-22d0-44c9-9bdd-0ddde39af53c}
 
 Il existe un ensemble de scripts Libre Office / OpenOffice pour faciliter le développement d'une famille.
 
@@ -110,7 +110,7 @@ Vous pouvez voir ci-dessous un exemple d'utilisation de ces scripts :
 
 ![ Exemple de construction ](30-20-structure-completion.gif "Exemple de construction")
 
-## Développement rapide {#quickstart:c4eef86b-1f5d-4fd1-b362-d78c8fa637eb}
+## Développement rapide {#dynacase-qs:c4eef86b-1f5d-4fd1-b362-d78c8fa637eb}
 
 Vous avez sûrement remarqué que le déploiement systématique des sources via le webinst est une action consommatrice en temps.
 Vous pouvez **lors des phases de développement** passer outre pour déployer de manière unitaire les différents fichiers :

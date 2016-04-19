@@ -1,4 +1,4 @@
-# Cycle de vie {#quickstart:64fac308-94ce-4717-96c7-56e2336c7791}
+# Cycle de vie {#dynacase-qs:64fac308-94ce-4717-96c7-56e2336c7791}
 
 Vous allez maintenant configurer les cycles de vie de votre application.
 

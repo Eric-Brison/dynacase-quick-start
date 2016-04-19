@@ -4,6 +4,7 @@ book:
     githubsrc: "https://github.com/Anakeen/dynacase-quick-start"
     version: "3.2"
     edition: "4"
+    id_prefix: "dynacase-qs"
     chapters:
         - level:   1
           content:  "00-Introduction/00-introduction.md"

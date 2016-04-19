@@ -1,14 +1,14 @@
-# Hook {#quickstart:39002eed-bc3a-4050-be76-71fcc0fbafa3}
+# Hook {#dynacase-qs:39002eed-bc3a-4050-be76-71fcc0fbafa3}
 
 Dans ce chapitre, vous allez utiliser la notion de hook (hameçons). 
 
-## Objectifs {#quickstart:6aaa1eea-d37c-4d09-ac25-2b1b7d593d71}
+## Objectifs {#dynacase-qs:6aaa1eea-d37c-4d09-ac25-2b1b7d593d71}
 
 -   Calcul automatique d'un tableau de référentiel,
 -   Contrôle à la création d'un document,
 -   Ajout de JS/CSS dans les formulaires.
 
-## Théorie {#quickstart:40cef360-334d-49e9-918b-ff12e28bb54d}
+## Théorie {#dynacase-qs:40cef360-334d-49e9-918b-ff12e28bb54d}
 
 Les [hooks][DocHook] sont des méthodes de la classe Doc qui sont appelées
 à différents moments clefs de la vie du document.
@@ -20,7 +20,7 @@ Dynacase propose deux types de hooks :
 
 La liste des hooks standards est dans la [documentation][DocHook].
 
-## Cadre {#quickstart:1247e02d-540e-4974-8ba7-e9c6d885224d}
+## Cadre {#dynacase-qs:1247e02d-540e-4974-8ba7-e9c6d885224d}
 
 Lors de la phase de spécification, les éléments suivants ont été identifiés. L'application nécessite :
 
@@ -31,7 +31,7 @@ Lors de la phase de spécification, les éléments suivants ont été identifié
 -   pour les _Référentiels de qualité_ :
     - un référentiel de qualité ne peut pas être supprimé tant que qu'il existe des chapitres associés à ce référentiel.
 
-## Automatisation du calcul d'un tableau {#quickstart:5ce81bd6-b692-4a7e-99f5-cc384b4ba4fd}
+## Automatisation du calcul d'un tableau {#dynacase-qs:5ce81bd6-b692-4a7e-99f5-cc384b4ba4fd}
 
 Vous allez mettre en place la logique permettant de calculer automatiquement le tableau des Fiches de non conformité.
 
@@ -94,7 +94,7 @@ De plus, cela permet d'appeler les méthodes concernées en dehors des hooks, sa
 
 Vous pouvez retrouver le fichier PHP complété dans les [sources][tuto_class_audit].
 
-### Problèmes {#quickstart:59afb583-b9da-4dc2-92d7-69426961562e}
+### Problèmes {#dynacase-qs:59afb583-b9da-4dc2-92d7-69426961562e}
 
 A ce stade si vous déployez les sources modifiées, le formulaire calcule automatiquement la valeur de l'attribut `caa_fnc_fnc`, il reste deux points à résoudre :
 
@@ -157,7 +157,7 @@ Attention à bien appeler le parent lors de la surcharge de la fonction de hook,
 
 Vous pouvez retrouver le fichier PHP complété dans les [sources][tuto_class_fnc].
 
-## Duplication {#quickstart:c2f7a2b2-f9d5-4db1-845d-371ba6425317}
+## Duplication {#dynacase-qs:c2f7a2b2-f9d5-4db1-845d-371ba6425317}
 
 Vous allez mettre en place un traitement après la duplication d'un audit pour supprimer les dates de l'audit
 dans le nouveau document créé par duplication.
@@ -206,7 +206,7 @@ Vous pouvez ensuite dupliquer le document en utilisant le menu du document `Autr
 
 Vous pouvez retrouver le fichier PHP complété dans les [sources][tuto_class_audit].
 
-## Affichage d'un message aux utilisateurs {#quickstart:d0443641-f6fc-419b-9647-c30bc1b2e635}
+## Affichage d'un message aux utilisateurs {#dynacase-qs:d0443641-f6fc-419b-9647-c30bc1b2e635}
 
 Vous allez maintenant mettre en place l'affichage conditionnel d'un message aux utilisateurs
 lorsque la date de fin d'audit est dépassée.
@@ -252,7 +252,7 @@ Une fois le code déployé si la date de fin d'audit est dans le passé vous ave
 
 Vous pouvez retrouver le fichier PHP complété dans les [sources][tuto_class_audit].
 
-## Contrôle à la suppression {#quickstart:e1f220a8-aa10-4149-aa4a-a20fd6b4598c}
+## Contrôle à la suppression {#dynacase-qs:e1f220a8-aa10-4149-aa4a-a20fd6b4598c}
 
 Vous allez mettre en place un contrôle à la suppression.
 
@@ -298,7 +298,7 @@ Ajoutez ensuite la fonction suivante :
 
 Vous pouvez retrouver le fichier PHP complété dans les [sources][tuto_class_ref].
 
-## Injection de JS ou CSS {#quickstart:bb25d5ff-d5a6-4d26-b32a-26db45de88e7}
+## Injection de JS ou CSS {#dynacase-qs:bb25d5ff-d5a6-4d26-b32a-26db45de88e7}
 
 Pour finir ce chapitre, le service qualité a jeté un coup d'œil sur vos ajouts et aimerait
 que le message envoyé aux utilisateurs soit moins anxiogène et donc moins rouge. 
@@ -347,7 +347,7 @@ La CSS définie ci-dessus est ajoutée dans le formulaire.
 
 Vous pouvez retrouver les sources complétées dans les [sources][tuto_class_base].
 
-## Mise en place des modifications {#ddui-ref:1061b39f-2d7b-486f-900e-ad4dda23949d}
+## Mise en place des modifications {#dynacase-qs:1061b39f-2d7b-486f-900e-ad4dda23949d}
 
 Vous allez maintenant déployer vos modifications :
 
@@ -355,12 +355,12 @@ Vous allez maintenant déployer vos modifications :
 
 Vous pouvez ensuite consulter les modifications apportées via l'application `http://<nomDeDomaine>/dynacase/`.
 
-## Conclusion {#quickstart:e066bf1f-a23b-4a8d-bf56-7207147c095b}
+## Conclusion {#dynacase-qs:e066bf1f-a23b-4a8d-bf56-7207147c095b}
 
 Vous avez abordé les _hooks_ et leurs fonctionnalités. Ils permettent de surcharger le fonctionnement par défaut
 des documents de Dynacase pour implémenter la logique métier de votre projet.
 
-## Voir aussi {#quickstart:3d2825a4-f9f5-45ce-ac3a-099965f178b5}
+## Voir aussi {#dynacase-qs:3d2825a4-f9f5-45ce-ac3a-099965f178b5}
 
 -   [Les sources après ce chapitre][tuto_zip],
 -   [Les hooks][DocHook].
@@ -368,7 +368,7 @@ des documents de Dynacase pour implémenter la logique métier de votre projet.
 <!-- links -->
 
 [DocHook]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:8f3d47de-32b5-4748-8a00-b1569c5423e5.html "Documentation : hooks"
-[internHelper]: #quickstart:4678ab4e-c5bf-4dae-b446-611baad5e225
+[internHelper]: #dynacase-qs:4678ab4e-c5bf-4dae-b446-611baad5e225
 [DocSetValue]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:febc397f-e629-4d47-955d-27cab8f4ed2f.html "Documentation : setValue"
 [DocDocPostStore]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:99520a31-0aef-4bc6-b20a-114737059d17.html "Documentation : postStore"
 [DocDocClearValue]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:30b0592f-f0cd-498f-bc5f-301891c297e0.html "Documentation : clearValue"
@@ -378,7 +378,7 @@ des documents de Dynacase pour implémenter la logique métier de votre projet.
 [DocVisibilite]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8.html "Documentation : visibilité"
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-30-40.zip
 [tuto_sources]: https://github.com/Anakeen/dynacase-quick-start-code/tree/3.2-after-30-40/COGIP_AUDIT
-[deploy_instruct]: #quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e
+[deploy_instruct]: #dynacase-qs:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e
 [tuto_class_audit]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-40/COGIP_AUDIT/COGIP_AUDIT_AUDIT__CLASS.php
 [tuto_struct_audit]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-40/COGIP_AUDIT/COGIP_AUDIT_AUDIT__STRUCT.csv
 [tuto_class_fnc]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-40/COGIP_AUDIT/COGIP_AUDIT_FNC__CLASS.php
