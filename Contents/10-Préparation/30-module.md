@@ -40,21 +40,22 @@ le contexte et exécute les éventuelles instructions d'installation ou mise à 
 
 ## Mise en place {#dynacase-qs:6207b157-95a4-4a53-b112-fbb5c2b58741}
 
-Il vous faut tout d'abord télécharger le **developper toolkit**, cet outil vous permet :
+Il vous faut tout d'abord télécharger le **developer toolkit**, cet outil vous permet :
 
 -   d’initialiser les sources d'un module Dynacase,
 -   d'ajouter des applications, des familles, des workflow à votre projet,
 -   de faire les traductions,
 -   de produire le fichier webinst.
 
-L'installation du toolkit et de ses dépendances est décrite dans [l'annexe toolkit][annexe_toolkit], merci de vous y référer.
+L'installation du toolkit et de ses dépendances est décrite dans [la documentation correspondante][devtools:index]
 
-Pour l'exécuter les devtool, la procédure diffère si vous êtes sous un système linux ou window :
+L'exécution des devtools diffère si vous êtes sous un système Linux ou Windows :
 
-* window : lancer la console et appeler le fichier dynacase-devtool.bat,
-* linux : lancer la console et appeler le fichier dynacase-devtool.phar (ou php dynacase-devtool.phar si vous n'avez pas associé les .phar à php).
+-   Windows : lancer la console et appeler le fichier `dynacase-devtool.bat`,
+-   Linux : lancer la console et appeler le fichier `dynacase-devtool.phar`
+    (ou exécuter `php dynacase-devtool.phar` si le fichier n'est pas exécutable).
 
-Une fois l'outil téléchargé et installé, lancez, via la console, la commande :
+L'initialisation du module se fait au moyen de la commande :
 
     <devtool> createModule
 
@@ -77,7 +78,7 @@ L'invite vous proposer les choix suivants :
       -h, --help              show the usage message
 
 
-Cette commande va intialiser pour vous une structure de module Dynacase type, pré-paramétrée.
+Cette commande va initialiser pour vous une structure de module Dynacase type, pré-paramétrée.
 
 Dans notre cas, vous rentrez les options suivantes :
 
@@ -102,7 +103,7 @@ Cela crée, dans le répertoire courant, la structure de fichiers suivante :
 
 La structure générée contient les éléments suivants :
 
--   **build.json** : ce fichier contient les instructions qui permettent au developper toolkit de builder le module et d'extraire les chaînes à traduire, vous pouvez en lire une description détaillée dans [l'annexe][annexe_buildjson]
+-   **build.json** : ce fichier contient les instructions qui permettent au developper toolkit de builder le module et d'extraire les chaînes à traduire, vous pouvez en lire une description détaillée dans [la documentation du developer toolkit][devtools:buildjson]
 -   **info.xml** : ce fichier décrit les actions à effectuer lors de
 l'installation et de la mise à jour du module. Il est initialisé avec les instructions pour enregistrer l'application `COGIP_AUDIT`
 -   **COGIP_AUDIT** : Ce répertoire contient les sources de l'application `COGIP_AUDIT` sur laquelle vous allez travailler.
@@ -315,6 +316,6 @@ et avez abordé les principes des traductions.
 [manref_internationalisation]: http://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1.html#core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1 "Internationalisation et traduction"
 [manref_internationalisation_php]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:ca73ff9e-ceb8-456b-bdd4-9b9056f1543d.html#core-ref:967cd878-e068-4c99-8266-adaed3f700ff "Utiliser une traduction dans un programme PHP"
 [url_toolkit]: https://github.com/Anakeen/development-tools/raw/3.2/dynacase-devtool.phar
-[annexe_toolkit]: #dynacase-qs:afe5e4fc-97c4-46d6-9583-94daa33919f1
-[annexe_buildjson]: #dynacase-qs:f0fb9907-44e1-4956-aea1-14beb5cc077c
+[devtools:index]: #devtools:
+[devtools:buildjson]: #devtools:f0fb9907-44e1-4956-aea1-14beb5cc077c
 [tuto_images]: https://github.com/Anakeen/dynacase-quick-start-code/tree/master/Images
