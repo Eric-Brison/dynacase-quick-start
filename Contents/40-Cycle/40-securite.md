@@ -54,12 +54,14 @@ ce qui va vous permettre de définir quel type d'utilisateur peut effectuer quel
 
 Connectez vous à l'interface d'administration : `http://<nomDeDomaine>/dynacase/admin.php`.
 
-Allez dans l'application `Gestion des documents > Explorateur de documents`,
+Allez dans l'application <kbd class="menu"><kbd><samp>Gestion des documents</samp></kbd>&gt;<kbd><samp>Explorateur de documents</samp></kbd></kbd>,
 cliquez ensuite sur `les cycles` et sélectionnez le cycle `Audit Audit`.
 
-Cliquez sur `Autres > Sécurité > Profil dédié`, la page se recharge, cliquez sur `Autres > Sécurité > Accessibilités...`.
+Cliquez sur <kbd class="menu"><kbd><samp>Autres</samp></kbd>&gt;<kbd><samp>Sécurité</samp></kbd>&gt;<kbd><samp>Profil dédié</samp></kbd></kbd>.
+La page se recharge, cliquez maintenant sur
+<kbd class="menu"><kbd><samp>Autres</samp></kbd>&gt;<kbd><samp>Sécurité</samp></kbd>&gt;<kbd><samp>Accessibilités...</samp></kbd></kbd>.
 
-La fenêtre ci-dessous s'ouvre :
+L'interface suivante vous est présentée :
 
 ![ Cycle de vie : Audit : Profil ](40-40-wdoc-profil-empty.png "Cycle de vie : Audit : Profil")
 
@@ -155,7 +157,7 @@ Un seul profil est créé et utilisé pour tous les états où le document est d
 
 ### Affectation des profils {#dynacase-qs:24184161-6f14-4cde-bfaf-9868a84657fe}
 
-Allez dans l'application `Gestion des documents > Explorateur de documents` cliquez ensuite sur `les cycles`
+Allez dans l'application <kbd class="menu"><kbd><samp>Gestion des documents</samp></kbd>&gt;<kbd><samp>Explorateur de documents</samp></kbd></kbd> cliquez ensuite sur `les cycles`
 et sélectionnez le cycle `Audit Audit`.
 
 Cliquez sur `Modifier`, sélectionnez l'onglet `Étapes` pour chaque onglet d'étape associé le profil :

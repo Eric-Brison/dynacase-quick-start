@@ -45,7 +45,7 @@ Vous allez commencer par spécifier les couleurs.
 
 Connectez vous à l'interface d'administration : `http://<nomDeDomaine>/dynacase/admin.php`.
 
-Allez dans l'application `Gestion des documents > Explorateur de documents` cliquez ensuite sur `les cycles`
+Allez dans l'application <kbd class="menu"><kbd><samp>Gestion des documents</samp></kbd>&gt;<kbd><samp>Explorateur de documents</samp></kbd></kbd> cliquez ensuite sur `les cycles`
 et sélectionnez le cycle `Audit Audit`.
 
 ![ Cycle de vie : Audit ](40-30-edit-wfl-audit.png "Cycle de vie : Audit")
