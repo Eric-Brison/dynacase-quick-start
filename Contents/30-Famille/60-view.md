@@ -645,17 +645,17 @@ Vous avez pu constater que le formulaire est facilement modifiable,
 
 <!-- links -->
 
-[DocAttrOptions]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496.html#core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496 "Documentation : options"
+[DocAttrOptions]: #core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496 "Documentation : options"
 [QuickStartHook]: #dynacase-qs:bb25d5ff-d5a6-4d26-b32a-26db45de88e7
-[DocZoneDocumentaire]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cb3e2b97-ee6d-4cdf-aa25-b2e41d0d3156.html#core-ref:49b96dc9-64e9-4f5a-a167-396282625c1e "Documentation : Zone documentaire"
-[DocVueRangeeTableau]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:9e76ac49-3b17-435b-ba25-a7122369be85.html#core-ref:9e76ac49-3b17-435b-ba25-a7122369be85 "Documentation : Vue de rangée de tableau"
-[DocVueAttribut]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:26dca29e-92b3-445f-a6d8-51eaa297219a.html#core-ref:26dca29e-92b3-445f-a6d8-51eaa297219a "Documentation : Vue d'attribut"
+[DocZoneDocumentaire]: #core-ref:49b96dc9-64e9-4f5a-a167-396282625c1e "Documentation : Zone documentaire"
+[DocVueRangeeTableau]: #core-ref:9e76ac49-3b17-435b-ba25-a7122369be85 "Documentation : Vue de rangée de tableau"
+[DocVueAttribut]: #core-ref:26dca29e-92b3-445f-a6d8-51eaa297219a "Documentation : Vue d'attribut"
 [DocStyle]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1844a1a8-1406-47bd-a884-1a18ef0a6ca7.html "Documentation : Style"
-[DocLayout]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:5f4a2f4b-9ceb-42db-8ac1-2a7baa621ce2.html#core-ref:5f4a2f4b-9ceb-42db-8ac1-2a7baa621ce2 "Documentation : Layout"
-[DocStyleSTY]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1844a1a8-1406-47bd-a884-1a18ef0a6ca7.html#core-ref:53fe66e1-ecb6-4f0b-b7b4-9d9a420ecbcf "Documentation : sty"
-[DocStyleRules]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1844a1a8-1406-47bd-a884-1a18ef0a6ca7.html#core-ref:76671db7-f66c-4a6f-853e-e573be03f213 "Documentation : style règles"
-[DocVueAttrEdit]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:26dca29e-92b3-445f-a6d8-51eaa297219a.html#core-ref:4faa4b17-56fc-4e42-a091-f1a97b7591b8 "Documentation : vue attribut édition"
-[DocVueAttrView]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:26dca29e-92b3-445f-a6d8-51eaa297219a.html#core-ref:9cb7b313-7294-424d-bd86-a63155025902 "Documentation : vue attribut consultation"
+[DocLayout]: #core-ref:5f4a2f4b-9ceb-42db-8ac1-2a7baa621ce2 "Documentation : Layout"
+[DocStyleSTY]: #core-ref:53fe66e1-ecb6-4f0b-b7b4-9d9a420ecbcf "Documentation : sty"
+[DocStyleRules]: #core-ref:7ebad29c-1340-4793-b2ee-7bfebc536b1b "Documentation : style règles"
+[DocVueAttrEdit]: #core-ref:4faa4b17-56fc-4e42-a091-f1a97b7591b8 "Documentation : vue attribut édition"
+[DocVueAttrView]: #core-ref:9cb7b313-7294-424d-bd86-a63155025902 "Documentation : vue attribut consultation"
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-30-60.zip
 [tuto_style]: https://github.com/Anakeen/dynacase-quick-start-code/tree/3.2-after-30-60/STYLE/COGIP_AUDIT
 [tuto_audit]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-60/COGIP_AUDIT/COGIP_AUDIT_AUDIT__STRUCT.csv

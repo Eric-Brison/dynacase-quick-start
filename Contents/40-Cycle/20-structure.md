@@ -482,10 +482,10 @@ mais vous pouvez trouver les fichiers complet dans la solution du chapitre.__
 
 [php_namespace]: http://www.php.net/manual/en/language.namespaces.rationale.php "Doc PHP : namespace"
 [phpStormFolding]: https://www.jetbrains.com/phpstorm/webhelp/folding-custom-regions-with-line-comments.html "PhpStorm : folding"
-[DocTransition]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b8824399-f17d-4007-adde-8a7433939273.html#core-ref:0215aec3-671e-40b5-98e9-2ea651eff224 "Documentation : transitions"
-[DocCycle]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b8824399-f17d-4007-adde-8a7433939273.html#core-ref:d5ddda0c-09d2-42b0-9543-0723e242ec09 "Documentation : cycle"
-[DocWID]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75.html#core-ref:6f013eb8-33c7-11e2-be43-373b9514dea3 "Documentation : wid"
-[DocCycleDeVie]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b8824399-f17d-4007-adde-8a7433939273.html#core-ref:d5ddda0c-09d2-42b0-9543-0723e242ec09 "Documentation : cycle de vie"
+[DocTransition]: #core-ref:0215aec3-671e-40b5-98e9-2ea651eff224 "Documentation : transitions"
+[DocCycle]: #core-ref:d5ddda0c-09d2-42b0-9543-0723e242ec09 "Documentation : cycle"
+[DocWID]: #core-ref:6f013eb8-33c7-11e2-be43-373b9514dea3 "Documentation : wid"
+[DocCycleDeVie]: #core-ref:d5ddda0c-09d2-42b0-9543-0723e242ec09 "Documentation : cycle de vie"
 [tuto_source]: https://github.com/Anakeen/dynacase-quick-start-code/tree/3.2-after-40-20/COGIP_AUDIT
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-40-20.zip
 [tuto_param_audit]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-1.0-integration/COGIP_AUDIT/COGIP_AUDIT_AUDIT__PARAM.csv

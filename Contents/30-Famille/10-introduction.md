@@ -37,5 +37,5 @@ Dans Dynacase, le document est matérialisé par :
 
 * [Présentation détaillée des concepts de famille, document et attribut][ManualIntro]
 
-[ManualIntro]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:e01bf76d-481b-41fd-ac64-167a68d34c55.html#core-ref:e01bf76d-481b-41fd-ac64-167a68d34c55 "Manuel de référence Core : famille, document et attribut"
+[ManualIntro]: #core-ref:e01bf76d-481b-41fd-ac64-167a68d34c55 "Manuel de référence Core : famille, document et attribut"
 

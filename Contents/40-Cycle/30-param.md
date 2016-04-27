@@ -480,15 +480,15 @@ Ces paramétrages permettent de créer simplement des cycles complets et riches 
 
 <!-- links -->
 
-[DocCreation]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:d461d5f5-b635-47a0-944d-473c227587ab.html#core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c "Documentation : création"
-[DocModelMail]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:8723b1aa-10d3-4316-af6b-071f4d59ceee.html#core-ref:8723b1aa-10d3-4316-af6b-071f4d59ceee "Documentation : modèle de mail"
-[DocMinuteurType]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a.html#core-ref:0c1a2bdc-ee8c-46f1-a463-cb0094b34364 "Documentation : minuteur"
-[DocMinuteur]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3de1c186-e1ab-44a3-b3b1-536d2f9a7554.html#core-ref:3de1c186-e1ab-44a3-b3b1-536d2f9a7554 "Documentation : minuteur"
-[DocWFLDoc]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a.html#core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a "Documentation : document workflow"
-[DocWFLClass]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b8824399-f17d-4007-adde-8a7433939273.html#core-ref:b8824399-f17d-4007-adde-8a7433939273 "Documentation : code"
-[DocWFLask]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:91e2017b-d595-47b3-bfc6-3b57c932b989.html#core-ref:9e248e52-ad6b-4089-ab83-11a534b307e9 "Documentation : ask"
-[DocTransition]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:91e2017b-d595-47b3-bfc6-3b57c932b989.html#core-ref:ed74f035-ec6f-4e63-ae61-014a2947a6aa "Documentation : transition"
-[DocSearchOnlyCount]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:2d43be1a-1991-42dd-a25d-5c3bb0b393fa.html#core-ref:2d43be1a-1991-42dd-a25d-5c3bb0b393fa "Documentation : searchDoc::onlyCount"
+[DocCreation]: #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c "Documentation : création"
+[DocModelMail]: #core-ref:8723b1aa-10d3-4316-af6b-071f4d59ceee "Documentation : modèle de mail"
+[DocMinuteurType]: #core-ref:0c1a2bdc-ee8c-46f1-a463-cb0094b34364 "Documentation : minuteur"
+[DocMinuteur]: #core-ref:3de1c186-e1ab-44a3-b3b1-536d2f9a7554 "Documentation : minuteur"
+[DocWFLDoc]: #core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a "Documentation : document workflow"
+[DocWFLClass]: #core-ref:b8824399-f17d-4007-adde-8a7433939273 "Documentation : code"
+[DocWFLask]: #core-ref:9e248e52-ad6b-4089-ab83-11a534b307e9 "Documentation : ask"
+[DocTransition]: #core-ref:ed74f035-ec6f-4e63-ae61-014a2947a6aa "Documentation : transition"
+[DocSearchOnlyCount]: #core-ref:2d43be1a-1991-42dd-a25d-5c3bb0b393fa "Documentation : searchDoc::onlyCount"
 [contrainte]: #dynacase-qs:ec7f3353-9d8f-4813-adda-ab1a964e2760
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-40-30.zip
 [tuto_color]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-40-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__PARAM.csv#L3

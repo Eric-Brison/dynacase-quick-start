@@ -143,10 +143,10 @@ en production et à réserver **uniquement** au développement de votre applicat
 
 <!-- style -->
 
-[docScript]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1566c46d-a53d-44cf-8c3f-0d0e21c0b117.html#core-ref:4df1314f-9fdd-4a7f-af37-a18cc39f3505 "Documentation : Script"
-[docHelper]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:0b2d4cd0-4eed-41d8-ac57-37525a444194.html#core-ref:0b2d4cd0-4eed-41d8-ac57-37525a444194 "Documentation : Aide à la saisie"
+[docScript]: #core-ref:4df1314f-9fdd-4a7f-af37-a18cc39f3505 "Documentation : Script"
+[docHelper]: #core-ref:0b2d4cd0-4eed-41d8-ac57-37525a444194 "Documentation : Aide à la saisie"
 [docStyle]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1844a1a8-1406-47bd-a884-1a18ef0a6ca7.html "Documentation : Style"
 [doci18n]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:8f3ad20a-4630-4e86-937b-da3fa26ba423.html "Documentation : traduction"
 [githubScriptOOO]: https://raw.github.com/Anakeen/dynacase-quick-start/documentation/Contents/1000-annexe/script-openoffice.txt "Script open office"
-[DocWiff]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-platform-operating-manual/website/book/manex-ref:59a0440c-da01-47f9-81a4-76b6953fbcbb.html#manex-ref:9a04eacf-fe22-4761-8535-88da83bdccb5 "Documentation : wiff cli"
+[DocWiff]: #manex-ref:9a04eacf-fe22-4761-8535-88da83bdccb5 "Documentation : wiff cli"
 [WikiCache]: https://fr.wikipedia.org/wiki/Cache-Control "Wikipedia : cache-control"

@@ -307,8 +307,8 @@ et avez abordé les principes des traductions.
 [wpoedit]: https://en.wikipedia.org/wiki/Poedit "Description de Poedit : Wikipedia"
 [upoedit]: http://www.poedit.net/download.php "Téléchargement de Poedit"
 [webinst]: http://docs.anakeen.com/dynacase/3.2/dynacase-doc-platform-operating-manual/website/book/module.html "Le format des paquets webinst"
-[manref_internationalisation]: http://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1.html#core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1 "Internationalisation et traduction"
-[manref_internationalisation_php]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:ca73ff9e-ceb8-456b-bdd4-9b9056f1543d.html#core-ref:967cd878-e068-4c99-8266-adaed3f700ff "Utiliser une traduction dans un programme PHP"
+[manref_internationalisation]: #core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1 "Internationalisation et traduction"
+[manref_internationalisation_php]: #core-ref:967cd878-e068-4c99-8266-adaed3f700ff "Utiliser une traduction dans un programme PHP"
 [url_toolkit]: https://github.com/Anakeen/development-tools/raw/3.2/dynacase-devtool.phar
 [devtools:index]: #devtools:
 [devtools:buildjson]: #devtools:f0fb9907-44e1-4956-aea1-14beb5cc077c

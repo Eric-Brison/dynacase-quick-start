@@ -613,8 +613,8 @@ Dans les chapitres suivants, vous allez continuer à améliorer celui-ci notamme
 [i18n]:     #dynacase-qs:989b4a9e-e3d8-475e-9dcf-9a158605eab6
 [stubs]:    #dynacase-qs:df9b59b1-3a7f-420b-a89d-36cd6894edb9
 [structure]:   #dynacase-qs:3b64d38f-81aa-4c02-aad5-77271247bf15
-[famProperty]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75.html#core-ref:6f013eb8-33c7-11e2-be43-373b9514dea3 "Documentation : propriété de famille"
-[DocValDefault]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75.html#core-ref:94fa51e2-3488-11e2-9e34-1f7c912168cf "Documentation : valeur par défaut"
+[famProperty]: #core-ref:6f013eb8-33c7-11e2-be43-373b9514dea3 "Documentation : propriété de famille"
+[DocValDefault]: #core-ref:94fa51e2-3488-11e2-9e34-1f7c912168cf "Documentation : valeur par défaut"
 [DocVisibilite]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8.html "Documentation : visibilité"
 [DocParamFam]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:4595c8e7-5002-4dbc-b6bb-882b4123efd8.html "Documentation : paramètre de famille"
 [DocAttrOption]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496.html "Documentation : options"
@@ -622,12 +622,12 @@ Dans les chapitres suivants, vous allez continuer à améliorer celui-ci notamme
 [DocDocAttrComputed]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:4565cab9-73c8-4eee-bfa7-218ffbd4b687.html "Documentation : attribut calculé"
 [DocDocHelper]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:0b2d4cd0-4eed-41d8-ac57-37525a444194.html "Documentation : Aide à la saisie"
 [DocGetCustomTitle]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3c5ff78d-c080-48fb-a293-9736ed4e95b8.html "Documentation : getCustomTitle"
-[DocDefFamParam]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75.html#core-ref:c28824e2-3486-11e2-be3b-337d2321d8ee "Documentation : définition paramètre de famille"
+[DocDefFamParam]: #core-ref:c28824e2-3486-11e2-be3b-337d2321d8ee "Documentation : définition paramètre de famille"
 [DocMethodClassDoc]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:7d224848-b334-419f-b88e-7d5d6311bfc2.html "Documentation : Principales méthodes de la classe Doc"
 [DocSearchDoc]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:a5216d5c-4e0f-4e3c-9553-7cbfda6b3255.html "Documentation : SearchDoc"
 [DocAddFilter]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:ec525c92-ab30-4861-aba1-7c2678df130a.html "Documentation : AddFilter"
 [DocGetDocumentList]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:8f0824fa-eed6-4170-b52d-d3dc7c5cb9c1.html "Documentation : getDocumentList"
-[DocHelperSyntaxe]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:0b2d4cd0-4eed-41d8-ac57-37525a444194.html#core-ref:c3ea0d07-1032-4abf-9746-df01e9434247 "Documentation : Syntaxe"
+[DocHelperSyntaxe]: #core-ref:c3ea0d07-1032-4abf-9746-df01e9434247 "Documentation : Syntaxe"
 [DocIsAlive]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b791d14e-800a-4b3b-bee7-41e271a8087e.html "Documentation : alive"
 [DocDocProperty]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353.html "Documentation : propriétés des documents"
 [DocLigneeDoc]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1cdff481-42e0-4caf-baba-d2348d760ca5.html "Documentation : Lignée documentaire"

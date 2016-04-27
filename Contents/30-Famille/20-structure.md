@@ -498,7 +498,7 @@ Dans les autres tutoriaux de ce chapitre vous allez apprendre à les paramétrer
 [annexe]:   #dynacase-qs:69f091b6-34ef-47b0-a453-8e00676b7dcd
 [annexeColor]: #dynacase-qs:c35b47c9-22d0-44c9-9bdd-0ddde39af53c
 [DocVisibilite]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8.html "Documentation : visibilité"
-[DocDocid]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:d461d5f5-b635-47a0-944d-473c227587ab.html#core-ref:d461d5f5-b635-47a0-944d-473c227587ab "Documentation : Docid"
+[DocDocid]: #core-ref:d461d5f5-b635-47a0-944d-473c227587ab "Documentation : Docid"
 [DocArray]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:dd400581-8896-4eec-9b9e-f1e5669cf180.html "Documentation : Array"
 [DocTab]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:5b236ce8-ad99-4e21-ae8a-cbea6942c3e4.html "Documentation : Tab"
 [Internationalisation]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:8f3ad20a-4630-4e86-937b-da3fa26ba423.html "Documentation : Internationalisation"

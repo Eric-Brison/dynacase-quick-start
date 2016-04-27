@@ -633,12 +633,12 @@ alors que celui qui n'a pas ce profil. Le DSI dans l'exemple ci-dessus (arnic.ma
 <!-- links -->
 
 [wikiCRUD]: https://fr.wikipedia.org/wiki/CRUD "Wikipedia : CRUD"
-[DocProfil]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:4e298112-3c56-4677-a05f-e314b1406326.html#core-ref:bdc11019-9650-4910-8182-2c9fcdee5fda "Documentation : Profil"
+[DocProfil]: #core-ref:bdc11019-9650-4910-8182-2c9fcdee5fda "Documentation : Profil"
 [DocCVDOC]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:017f061a-7c12-42f8-aa9b-276cf706e7e0.html "Documentation : Contrôle de vue"
-[DocProfilExport]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:602c6331-7cdb-4b24-8a56-ffd11e00502f.html#core-ref:602c6331-7cdb-4b24-8a56-ffd11e00502f "Documentation : Profil"
-[DocProfilDocument]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:a99dcc5f-f42f-4574-bbfa-d7bb0573c95d.html#core-ref:f1575705-10e8-4bf2-83b3-4c0b5bfb77cf "Documentation : Profil Document"
+[DocProfilExport]: #core-ref:602c6331-7cdb-4b24-8a56-ffd11e00502f "Documentation : Profil"
+[DocProfilDocument]: #core-ref:f1575705-10e8-4bf2-83b3-4c0b5bfb77cf "Documentation : Profil Document"
 [DocMasque]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:327ad491-06df-4e5b-b49a-695c75439fe1.html "Documentation : masque"
-[DocZone]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:cb3e2b97-ee6d-4cdf-aa25-b2e41d0d3156.html#core-ref:49b96dc9-64e9-4f5a-a167-396282625c1e "Documentation : Zone"
+[DocZone]: #core-ref:49b96dc9-64e9-4f5a-a167-396282625c1e "Documentation : Zone"
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-30-50.zip
 [tuto_param_audit]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-50/COGIP_AUDIT/COGIP_AUDIT_AUDIT__PARAM.csv
 [tuto_param_chapitre]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-30-50/COGIP_AUDIT/COGIP_AUDIT_CHAPITRE__PARAM.csv

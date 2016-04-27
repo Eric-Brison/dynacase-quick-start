@@ -207,8 +207,8 @@ Vous pouvez définir qui peut effectuer quelle transition et qui peut _voir_/_mo
 
 <!-- links -->
 
-[DocProfilDocument]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:a99dcc5f-f42f-4574-bbfa-d7bb0573c95d.html#core-ref:f1575705-10e8-4bf2-83b3-4c0b5bfb77cf "Documentation : profil de document"
-[DocCSVWFL]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:e0d99925-df0d-4d51-8ebc-d44c4dd03873.html#core-ref:e0d99925-df0d-4d51-8ebc-d44c4dd03873 "Documentation : Import cycle de vie"
+[DocProfilDocument]: #core-ref:f1575705-10e8-4bf2-83b3-4c0b5bfb77cf "Documentation : profil de document"
+[DocCSVWFL]: #core-ref:e0d99925-df0d-4d51-8ebc-d44c4dd03873 "Documentation : Import cycle de vie"
 [ParamDroit]: #dynacase-qs:1cd2c714-d287-4ca6-8282-c5a20393c0ea
 [ExportCycle]: #dynacase-qs:6633ab3c-ab35-48ad-93a9-71898bfad9f3
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-40-40.zip
