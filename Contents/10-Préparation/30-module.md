@@ -49,6 +49,11 @@ Il vous faut tout d'abord télécharger le **developer toolkit**, cet outil vous
 
 L'installation du toolkit et de ses dépendances est décrite dans [la documentation correspondante][devtools:index]
 
+Le developer toolkit est téléchargeable depuis [notre site][eec-public-development-tools] :
+
+-   `dynacase-devtool.phar` pour linux
+-   `dynacase-devtool-win32.zip` pour windows
+
 L'exécution des devtools diffère si vous êtes sous un système Linux ou Windows :
 
 -   Windows : lancer la console et appeler le fichier `dynacase-devtool.bat`,
