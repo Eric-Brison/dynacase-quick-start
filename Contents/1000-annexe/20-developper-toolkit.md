@@ -1,6 +1,6 @@
-# Developper Toolkit {#quickstart:afe5e4fc-97c4-46d6-9583-94daa33919f1}
+# Developper Toolkit {#dynacase-qs:afe5e4fc-97c4-46d6-9583-94daa33919f1}
 
-## Présentation {#quickstart:ec240a39-07cc-4705-9c64-d1119a066fc8}
+## Présentation {#dynacase-qs:ec240a39-07cc-4705-9c64-d1119a066fc8}
 
 Le developper toolkit est une application conçue pour fiabiliser et accélérer 
 le développement et la maintenance d'application Dynacase.
@@ -12,7 +12,7 @@ Les principales fonctionnalité du toolkit sont :
 * l'extraction des chaînes à traduire,
 * la génération de template de code.
 
-## Pré-requis {#quickstart:6e47679b-125b-4cd6-bc8d-806e5500128d}
+## Pré-requis {#dynacase-qs:6e47679b-125b-4cd6-bc8d-806e5500128d}
 
 Pour window, le toolkit est livré dans un package avec toutes ses dépendances : [toolkit window][url_win_toolkit].
 
@@ -23,7 +23,7 @@ Pour linux, les paquets :
 
 sont requis.
 
-## Installation {#quickstart:e9e7fc63-031f-44c7-8443-60787e35d7be}
+## Installation {#dynacase-qs:e9e7fc63-031f-44c7-8443-60787e35d7be}
 
 Pour linux : le developper toolkit est un [phar][php_phar]. Il suffit donc télécharger le [phar][url_linux_toolkit]. 
 Et de l’exécuter avec l'interpréteur PHP.
@@ -33,7 +33,7 @@ Et de l’exécuter avec l'interpréteur PHP.
 Pour window, il faut télécharger [toolkit window][url_win_toolkit] et le dezipper. Celui-ci contient un .bat `dynacase-devtool.bat` qui
 doit être exécuté via la console window.
 
-## Utilisation {#quickstart:6e013ebc-697a-4c18-8e38-d571b94d4261}
+## Utilisation {#dynacase-qs:6e013ebc-697a-4c18-8e38-d571b94d4261}
 
 Le devtool vous propose par défaut la liste de commandes suivante :
 
@@ -53,7 +53,7 @@ Le devtool vous propose par défaut la liste de commandes suivante :
 
 Chacune de ces commandes est auto-documentée via l'option `-h` ou `--help`.
 
-## Build.json {#quickstart:f0fb9907-44e1-4956-aea1-14beb5cc077c}
+## Build.json {#dynacase-qs:f0fb9907-44e1-4956-aea1-14beb5cc077c}
 
 Le fichier build.json qui est initialisé via la createModule contient la configuration permettant au developper tool de générer le webinst et d'extraire les chaînes à traduire.
 
@@ -80,7 +80,7 @@ Les entrées sont :
 
 **Attention** : Tout répertoire qui n'est ni dans la liste des applications, ni dans celles des included path n'est pas inclus dans le webinst et donc pas déployé sur le serveur.
 
-## Utilisation avancée {#quickstart:c5c3fc85-44b9-48c8-a522-91afe6975787}
+## Utilisation avancée {#dynacase-qs:c5c3fc85-44b9-48c8-a522-91afe6975787}
 
 Si vous souhaitez customiser les commandes, vous pouvez télécharger [le dépôt][url_depot], celui-ci contient l'ensemble du code. Avant de l'utiliser vous devez télécharger ses dépendances avec [composer][php_composer].
 

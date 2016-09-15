@@ -1,8 +1,8 @@
-# Paramétrage du cycle de vie {#quickstart:44863baa-b9c5-46a7-8a46-d28b4d8696a2}
+# Paramétrage du cycle de vie {#dynacase-qs:44863baa-b9c5-46a7-8a46-d28b4d8696a2}
 
 Ce chapitre aborde le paramétrage du cycle de vie.
 
-## Objectifs {#quickstart:8bf472d9-6bd8-40fe-ac1c-7f8eef15f5a7}
+## Objectifs {#dynacase-qs:8bf472d9-6bd8-40fe-ac1c-7f8eef15f5a7}
 
 -   Mettre en place les couleurs des étapes,
 -   Ajouter des modèles de mail,
@@ -10,7 +10,7 @@ Ce chapitre aborde le paramétrage du cycle de vie.
 -   Effectuer des contrôles avant un changement d'étape,
 -   Poser des questions lors d'un changement d'étape.
 
-## Cadre {#quickstart:73d8d0ac-0892-46b2-bd89-3e834ca18b4f}
+## Cadre {#dynacase-qs:73d8d0ac-0892-46b2-bd89-3e834ca18b4f}
 
 Lors de la phase d'analyse, les points suivants ont été relevés :
 
@@ -22,7 +22,7 @@ Lors de la phase d'analyse, les points suivants ont été relevés :
 -   une fois que l'audit n'est plus dans l'étape `Brouillon`,
     le contrôle de cohérence sur la date de début inférieure à la date du jour ne doit plus être appliqué.
 
-## Théorie {#quickstart:86140cda-43d9-44f1-b16f-4f5c2eb39c4e}
+## Théorie {#dynacase-qs:86140cda-43d9-44f1-b16f-4f5c2eb39c4e}
 
 Le paramétrage d'un cycle de vie passe par plusieurs éléments distincts :
 
@@ -35,17 +35,17 @@ Le paramétrage d'un cycle de vie passe par plusieurs éléments distincts :
     -   du [code métier][DocWFLClass] qui peut être exécuté avant ou après un changement d'étape,
     -   la liste des questions ([ask][DocWFLask]) qui doivent être posée lors d'un changement d'état.
 
-## Paramétrage via le document {#quickstart:1b65b62f-7169-4e8f-9fe0-aa18d2ca03df}
+## Paramétrage via le document {#dynacase-qs:1b65b62f-7169-4e8f-9fe0-aa18d2ca03df}
 
 L'intégralité du paramétrage du document cycle de vie est détaillé dans la [documentation][DocWFLDoc].
 
-### Couleur {#quickstart:f7499780-3582-4e5e-a677-9481b1d94841}
+### Couleur {#dynacase-qs:f7499780-3582-4e5e-a677-9481b1d94841}
 
 Vous allez commencer par spécifier les couleurs.
 
 Connectez vous à l'interface d'administration : `http://<nomDeDomaine>/dynacase/admin.php`.
 
-Allez dans l'application `Gestion des documents > Explorateur de documents` cliquez ensuite sur `les cycles`
+Allez dans l'application <kbd class="menu"><kbd><samp>Gestion des documents</samp></kbd>&gt;<kbd><samp>Explorateur de documents</samp></kbd></kbd> cliquez ensuite sur `les cycles`
 et sélectionnez le cycle `Audit Audit`.
 
 ![ Cycle de vie : Audit ](40-30-edit-wfl-audit.png "Cycle de vie : Audit")
@@ -87,7 +87,7 @@ __Attention__, il faut exporter le document de cycle de vie et mettre à jour sa
 
 Vous pouvez trouver le document complété dans [les sources][tuto_color].
 
-### Les mails {#quickstart:284cd032-303b-4140-bb44-72a30843d0c8}
+### Les mails {#dynacase-qs:284cd032-303b-4140-bb44-72a30843d0c8}
 
 Ouvrez le document de cycle de vie en modification.
 
@@ -138,7 +138,7 @@ quelle que soit la transition utilisée pour parvenir dans cette étape.
 
 Vous pouvez trouver le modèle de mail complété dans [les sources][tuto_mail_dem].
 
-### Relance (timer) {#quickstart:67c58ac9-a1df-4d22-9bb6-8172a3adfb1d}
+### Relance (timer) {#dynacase-qs:67c58ac9-a1df-4d22-9bb6-8172a3adfb1d}
 
 Ouvrez le document de cycle de vie en modification.
 
@@ -159,7 +159,7 @@ Remplissez les champs suivants :
 -   Titre : Démarrer,
 -   Délai (en jours) (première ligne) : 15
 
-#### Création du mail associé {#quickstart:b3e8706a-1c26-49cc-b530-b36f3ee7d018}
+#### Création du mail associé {#dynacase-qs:b3e8706a-1c26-49cc-b530-b36f3ee7d018}
 
 Cliquez sur le `+` dans la colonne `Modèle de mail` pour initier le modèle de mail.
 
@@ -203,7 +203,7 @@ Vous allez utiliser le minuteur pour effectuer une relance par mail, mais celui-
 <span class="flag inline nota-bene"></span>
 Les différentes options pour paramétrer les règles de relance sont décrites dans la [documentation][DocMinuteur].
 
-#### Nom logique {#quickstart:598741bf-95c4-486b-b8f0-114fb6196d74}
+#### Nom logique {#dynacase-qs:598741bf-95c4-486b-b8f0-114fb6196d74}
 
 Cliquez sur le lien `Minuteur démarrer` puis sur `Autres > Propriétés` et donnez le nom suivant `MINUTEUR_DEMARRER`.
 
@@ -211,7 +211,7 @@ Cliquez sur le lien `Minuteur démarrer` puis sur `Autres > Propriétés` et don
 Vous pouvez suivre les différents minuteurs en activité grâce à l'interface de suivi qui est dans l'admin
 `Gestion des documents > Gestion des minuteurs`.
 
-### Export du paramétrage {#quickstart:6633ab3c-ab35-48ad-93a9-71898bfad9f3}
+### Export du paramétrage {#dynacase-qs:6633ab3c-ab35-48ad-93a9-71898bfad9f3}
 
 Vous allez maintenant exporter le paramétrage que vous avez mis en place.
 Vous avez plusieurs manières de faire cette action, soit :
@@ -257,11 +257,11 @@ Ajoutez les nouveaux documents au début du fichier `__PARAM.csv`, soit :
 
 Vous pouvez trouver le modèle de mail complété dans [les sources][tuto_minuteur].
 
-## Paramétrage via le code {#quickstart:bc42ac10-2bf8-48fc-850b-30caf71b72d8}
+## Paramétrage via le code {#dynacase-qs:bc42ac10-2bf8-48fc-850b-30caf71b72d8}
 
 L'intégralité du paramétrage du cycle de vie via le code est détaillé dans la [documentation][DocWFLClass].
 
-### Contrôle au changement d'état {#quickstart:edf4add4-7cde-4fc7-a0a9-56caab45516a}
+### Contrôle au changement d'état {#dynacase-qs:edf4add4-7cde-4fc7-a0a9-56caab45516a}
 
 Les contrôle au changement d'état se font lors des [transitions][DocTransition],
 il existe quatre hook de transition utilisés pour :
@@ -275,12 +275,12 @@ il existe quatre hook de transition utilisés pour :
     Ce hook ne peut plus annuler le changement d'état,
 -   `m3` : modifier le document après le changement d'état et après les différents traitements automatiques de Dynacase.
 
-#### m0 (pré-condition) {#quickstart:1fbdce8d-c8dc-44b7-ad87-cd8348ac0d12}
+#### m0 (pré-condition) {#dynacase-qs:1fbdce8d-c8dc-44b7-ad87-cd8348ac0d12}
 
 Vous allez utiliser le `m0` pour vérifier que les fiches de non-conformités associées à l'audit sont bien toutes closes
 avant d'accorder ou de refuser la certification.
 
-##### Définition de la fonction {#quickstart:3ddde06d-f233-4e54-980a-8264e370ef9b}
+##### Définition de la fonction {#dynacase-qs:3ddde06d-f233-4e54-980a-8264e370ef9b}
 
 **Attention** : Pour fonctionner cette méthode nécessite la présence du cycle de vie des FNC, que vous pouvez 
 retrouver dans les [sources complétées][source_precedent] du chapitre précédent.
@@ -312,7 +312,7 @@ Cette fonction effectue une recherche sur les FNC, elle a les spécificités sui
 
 Vous pouvez trouver le fichier complété dans [les sources][tuto_audit_code_1].
 
-##### Enregistrement de la fonction {#quickstart:587bf536-180e-4878-9c02-9b0f2969c441}
+##### Enregistrement de la fonction {#dynacase-qs:587bf536-180e-4878-9c02-9b0f2969c441}
 
 Modifiez le tableau de déclaration des transitions :
 
@@ -333,12 +333,12 @@ Dans l'exemple ci-dessus la transition est refusée et au survol un message est 
 
 Vous pouvez trouver le fichier complété dans [les sources][tuto_audit_code_1].
 
-### Question au changement d'état (ask) {#quickstart:52b12e42-a3e8-4b7f-a7a2-bf0c77f2691c}
+### Question au changement d'état (ask) {#dynacase-qs:52b12e42-a3e8-4b7f-a7a2-bf0c77f2691c}
 
 Vous allez maintenant mettre en place le mécanisme de [`ask`][DocWFLask].
 Il permet de poser un ensemble de question via un petit formulaire lors d'un changement d'état.
 
-#### Déclaration du ask {#quickstart:1a89239f-465e-464e-8098-cf59854371d3}
+#### Déclaration du ask {#dynacase-qs:1a89239f-465e-464e-8098-cf59854371d3}
 
 Les ask se composent de deux éléments :
 
@@ -386,7 +386,7 @@ Lors du passage de la transition, le ask est présenté sous la forme d'une fen�
 
 Vous pouvez trouver le fichier complété dans [les sources][tuto_audit_code].
 
-#### Utilisation du ASK {#quickstart:e7fe1de5-f5da-45dc-bbb2-2ca0f4449477}
+#### Utilisation du ASK {#dynacase-qs:e7fe1de5-f5da-45dc-bbb2-2ca0f4449477}
 
 Les valeurs de retour du ASK peuvent être utilisées au m1, m2 et m3 et dans les modèles de mail.
 
@@ -424,7 +424,7 @@ l'interface ci-dessus est présentée.
 
 Vous pouvez trouver le fichier complété dans [les sources][tuto_audit_code].
 
-## Mise à jour des contrôle de cohérence {#quickstart:85a0bad9-9e7f-424f-b5d3-88aea4616944}
+## Mise à jour des contrôle de cohérence {#dynacase-qs:85a0bad9-9e7f-424f-b5d3-88aea4616944}
 
 Vous allez maintenant modifier le contrôle de cohérence que vous avez mis en place sur les [dates][contrainte]
 pour que le contrôle ne se déclenche que lorsque la fiche est à l'état `Brouillon`.
@@ -454,22 +454,22 @@ Vous avez ajouté une condition pour que la contrainte ne se déclenche qu'à l'
 
 Vous pouvez trouver le fichier complété dans [les sources][tuto_audit_class].
 
-## Mise en place des modifications {#ddui-ref:d9d8d8ee-cbc9-4321-8105-fe0ee8797d27}
+## Mise en place des modifications {#dynacase-qs:d9d8d8ee-cbc9-4321-8105-fe0ee8797d27}
 
 Vous allez maintenant déployer vos modifications :
 
-    <devtool> deploy --target quickstart
+    <devtool> deploy -s . --url http://admin:anakeen@<nomDeDomaine>/dynacase-control/ --port <port> --context dynacase
 
 Vous pouvez ensuite consulter les modifications apportées via l'application `http://<nomDeDomaine>/dynacase/`.
 
-## Conclusion {#quickstart:72d48b82-db47-4c82-9d5e-a7cb5b6077e2}
+## Conclusion {#dynacase-qs:72d48b82-db47-4c82-9d5e-a7cb5b6077e2}
 
 Vous connaissez les principales manipulations que vous pouvez effectuer avec un cycle de vie,
 que ça soit à l'aide du document cycle de vie ou de la classe de la famille cycle de vie.
 
 Ces paramétrages permettent de créer simplement des cycles complets et riches et de guider les utilisateurs.
 
-## Voir aussi {#quickstart:837931f9-3475-4494-9f2b-c09327ec4603}
+## Voir aussi {#dynacase-qs:837931f9-3475-4494-9f2b-c09327ec4603}
 
 -   [Les sources après ce chapitre][tuto_zip],
 -   [Document workflow][DocWFLDoc],
@@ -480,16 +480,16 @@ Ces paramétrages permettent de créer simplement des cycles complets et riches 
 
 <!-- links -->
 
-[DocCreation]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:d461d5f5-b635-47a0-944d-473c227587ab.html#core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c "Documentation : création"
-[DocModelMail]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:8723b1aa-10d3-4316-af6b-071f4d59ceee.html#core-ref:8723b1aa-10d3-4316-af6b-071f4d59ceee "Documentation : modèle de mail"
-[DocMinuteurType]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a.html#core-ref:0c1a2bdc-ee8c-46f1-a463-cb0094b34364 "Documentation : minuteur"
-[DocMinuteur]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:3de1c186-e1ab-44a3-b3b1-536d2f9a7554.html#core-ref:3de1c186-e1ab-44a3-b3b1-536d2f9a7554 "Documentation : minuteur"
-[DocWFLDoc]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a.html#core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a "Documentation : document workflow"
-[DocWFLClass]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:b8824399-f17d-4007-adde-8a7433939273.html#core-ref:b8824399-f17d-4007-adde-8a7433939273 "Documentation : code"
-[DocWFLask]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:91e2017b-d595-47b3-bfc6-3b57c932b989.html#core-ref:9e248e52-ad6b-4089-ab83-11a534b307e9 "Documentation : ask"
-[DocTransition]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:91e2017b-d595-47b3-bfc6-3b57c932b989.html#core-ref:ed74f035-ec6f-4e63-ae61-014a2947a6aa "Documentation : transition"
-[DocSearchOnlyCount]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:2d43be1a-1991-42dd-a25d-5c3bb0b393fa.html#core-ref:2d43be1a-1991-42dd-a25d-5c3bb0b393fa "Documentation : searchDoc::onlyCount"
-[contrainte]: #quickstart:ec7f3353-9d8f-4813-adda-ab1a964e2760
+[DocCreation]: #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c "Documentation : création"
+[DocModelMail]: #core-ref:8723b1aa-10d3-4316-af6b-071f4d59ceee "Documentation : modèle de mail"
+[DocMinuteurType]: #core-ref:0c1a2bdc-ee8c-46f1-a463-cb0094b34364 "Documentation : minuteur"
+[DocMinuteur]: #core-ref:3de1c186-e1ab-44a3-b3b1-536d2f9a7554 "Documentation : minuteur"
+[DocWFLDoc]: #core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a "Documentation : document workflow"
+[DocWFLClass]: #core-ref:b8824399-f17d-4007-adde-8a7433939273 "Documentation : code"
+[DocWFLask]: #core-ref:9e248e52-ad6b-4089-ab83-11a534b307e9 "Documentation : ask"
+[DocTransition]: #core-ref:ed74f035-ec6f-4e63-ae61-014a2947a6aa "Documentation : transition"
+[DocSearchOnlyCount]: #core-ref:2d43be1a-1991-42dd-a25d-5c3bb0b393fa "Documentation : searchDoc::onlyCount"
+[contrainte]: #dynacase-qs:ec7f3353-9d8f-4813-adda-ab1a964e2760
 [tuto_zip]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-40-30.zip
 [tuto_color]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-40-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__PARAM.csv#L3
 [tuto_mail_dem]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-40-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__PARAM.csv#L5-L7
@@ -497,6 +497,6 @@ Ces paramétrages permettent de créer simplement des cycles complets et riches 
 [tuto_audit_code]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-40-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__WFL.php
 [tuto_audit_wfl]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-40-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__WFL.csv#L5-L7
 [tuto_audit_class]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-after-40-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__CLASS.php#L78
-[deploy_instruct]: #quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e
+[deploy_instruct]: #dynacase-qs:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e
 [source_precedent]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-40-20.zip
 [tuto_audit_code_1]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-during-40-30/COGIP_AUDIT/COGIP_AUDIT_AUDIT__WFL.php

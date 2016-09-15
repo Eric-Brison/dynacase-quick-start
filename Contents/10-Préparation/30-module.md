@@ -1,9 +1,9 @@
-# Mise en place de l'environnement de développement {#quickstart:5b0e5ec5-1f8d-49ea-9953-42727cdc1b2b}
+# Mise en place de l'environnement de développement {#dynacase-qs:5b0e5ec5-1f8d-49ea-9953-42727cdc1b2b}
 
 Ce chapitre va vous permettre d'initialiser le module contenant le code source de 
 votre application Dynacase.
 
-## Objectifs {#quickstart:04e53353-fe9b-4b51-8097-fdc8b60ea166}
+## Objectifs {#dynacase-qs:04e53353-fe9b-4b51-8097-fdc8b60ea166}
 
 -   Télécharger le template de module
 -   Initialiser le module
@@ -11,9 +11,9 @@ votre application Dynacase.
 -   Faire une première traduction
 -   Déployer votre module
 
-## Partie théorique {#quickstart:88db7990-155d-4f96-95e1-57406b2b493b}
+## Partie théorique {#dynacase-qs:88db7990-155d-4f96-95e1-57406b2b493b}
 
-Comme nous l'avons vu au [chapitre précédent](#quickstart:b4e5f7b4-de08-4890-8401-440f335e90fe),
+Comme nous l'avons vu au [chapitre précédent](#dynacase-qs:b4e5f7b4-de08-4890-8401-440f335e90fe),
 Dynacase Control utilise le concept de module pour gérer les différents éléments constituants un
 contexte.
 
@@ -38,23 +38,29 @@ Ce fichier, nommé *paquet*, est composé de la manière suivante :
 Une fois le module fourni à Dynacase Control, celui-ci lit le fichier `info.xml`, décompresse le contenu du content.tar.gz dans
 le contexte et exécute les éventuelles instructions d'installation ou mise à jour.
 
-## Mise en place {#quickstart:6207b157-95a4-4a53-b112-fbb5c2b58741}
+## Mise en place {#dynacase-qs:6207b157-95a4-4a53-b112-fbb5c2b58741}
 
-Il vous faut tout d'abord télécharger le **developper toolkit**, cet outil vous permet :
+Il vous faut tout d'abord télécharger le **developer toolkit**, cet outil vous permet :
 
 -   d’initialiser les sources d'un module Dynacase,
 -   d'ajouter des applications, des familles, des workflow à votre projet,
 -   de faire les traductions,
 -   de produire le fichier webinst.
 
-L'installation du toolkit et de ses dépendances est décrite dans [l'annexe toolkit][annexe_toolkit], merci de vous y référer.
+L'installation du toolkit et de ses dépendances est décrite dans [la documentation correspondante][devtools:index]
 
-Pour l'exécuter les devtool, la procédure diffère si vous êtes sous un système linux ou window :
+Le developer toolkit est téléchargeable depuis [notre site][eec-public-development-tools] :
 
-* window : lancer la console et appeler le fichier dynacase-devtool.bat,
-* linux : lancer la console et appeler le fichier dynacase-devtool.phar (ou php dynacase-devtool.phar si vous n'avez pas associé les .phar à php).
+-   `dynacase-devtool.phar` pour linux
+-   `dynacase-devtool-win32.zip` pour windows
 
-Une fois l'outil téléchargé et installé, lancez, via la console, la commande :
+L'exécution des devtools diffère si vous êtes sous un système Linux ou Windows :
+
+-   Windows : lancer la console et appeler le fichier `dynacase-devtool.bat`,
+-   Linux : lancer la console et appeler le fichier `dynacase-devtool.phar`
+    (ou exécuter `php dynacase-devtool.phar` si le fichier n'est pas exécutable).
+
+L'initialisation du module se fait au moyen de la commande :
 
     <devtool> createModule
 
@@ -77,7 +83,7 @@ L'invite vous proposer les choix suivants :
       -h, --help              show the usage message
 
 
-Cette commande va intialiser pour vous une structure de module Dynacase type, pré-paramétrée.
+Cette commande va initialiser pour vous une structure de module Dynacase type, pré-paramétrée.
 
 Dans notre cas, vous rentrez les options suivantes :
 
@@ -102,7 +108,7 @@ Cela crée, dans le répertoire courant, la structure de fichiers suivante :
 
 La structure générée contient les éléments suivants :
 
--   **build.json** : ce fichier contient les instructions qui permettent au developper toolkit de builder le module et d'extraire les chaînes à traduire, vous pouvez en lire une description détaillée dans [l'annexe][annexe_buildjson]
+-   **build.json** : ce fichier contient les instructions qui permettent au developper toolkit de builder le module et d'extraire les chaînes à traduire, vous pouvez en lire une description détaillée dans [la documentation du developer toolkit][devtools:buildjson]
 -   **info.xml** : ce fichier décrit les actions à effectuer lors de
 l'installation et de la mise à jour du module. Il est initialisé avec les instructions pour enregistrer l'application `COGIP_AUDIT`
 -   **COGIP_AUDIT** : Ce répertoire contient les sources de l'application `COGIP_AUDIT` sur laquelle vous allez travailler.
@@ -131,7 +137,7 @@ Toutes les chaînes de caractères qui sont inclues dans les fonction `_` et `N_
 
 Vous pouvez ajouter l'image au répertoire, toutes les images du tutoriel peuvent-être trouvées [ici][tuto_images].
 
-## Traduction {#quickstart:bec85337-36e8-4289-a938-f48b361e125e}
+## Traduction {#dynacase-qs:bec85337-36e8-4289-a938-f48b361e125e}
 
 Vous allez lancer la procédure permettant l'extraction des clefs de traduction et compléter celles-ci.
 
@@ -199,6 +205,7 @@ Complétez avec `Application d'audit de la cogip`.
 
 Ce qui donne :
 
+    [gettext]
     [...]
     msgid "COGIP_AUDIT:COGIP_AUDIT"
     msgstr "Application d'audit de la cogip"
@@ -229,7 +236,7 @@ Une fois les modifications faites, vous obtenez le fichier suivant :
     msgstr "Application d'audit de la cogip"
 
 
-## Production du paquet {#quickstart:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e}
+## Production du paquet {#dynacase-qs:e53aa0c3-6fa8-4083-8bb8-b64bd750ab9e}
 
 Vous allez maintenant conclure ce chapitre en produisant le fichier contenant le paquet et en le déployant à l'aide de l'interface web.
 
@@ -264,7 +271,7 @@ Vous pouvez ensuite vérifier que celle-ci est bien installée et que la traduct
 
 Vous pouvez retrouver votre application dans la liste. En outre, la traduction que nous avons faite apparaît dans la colonne description.
 
-## Déploiement automatisé de paquet {#ddui-ref:24eb4759-95cb-4754-9940-0f1dc56ccd36}
+## Déploiement automatisé de paquet {#dynacase-qs:24eb4759-95cb-4754-9940-0f1dc56ccd36}
 
 Chaque fois que vous souhaiterez déployer vos développements sur le serveur de production, il faudra,
 comme indiqué ci-dessus :
@@ -276,30 +283,24 @@ comme indiqué ci-dessus :
 
 Afin de simplifier cette succession d'étapes, les devtool fournissent la commande `deploy`.
 
-Lors de son premier usage, il faut préciser tous les paramètres de déploiement, ainsi qu'une _target_, dans laquelle seront mémorisés ces paramètres pour simplifier les déploiements futurs :
+Il faut préciser tous les paramètres de déploiement :
 
--   `--target` : le nom de la target
+-   `--sourcePath`, `-s` : emplacement des sources
 -   `--url` : l'url d'accès à Dynacase Control (sous la forme `http[s]://<user>:<password>@<host>/<path/to/control>`)
 -   `--port` : le port d'accès à Dynacase Control
 -   `--context` : le nom du contexte
 
 soit :
 
-    <devtool> deploy --target quickstart --url http://admin:anakeen@<nomDeDomaine>/dynacase-control/ --port <port> --context dynacase
+    <devtool> deploy -s . --url http://admin:anakeen@<nomDeDomaine>/dynacase-control/ --port <port> --context dynacase
 
-Les différents paramètres de déploiement sont sauvegardés dans le fichier `deploy.json` à la racine du contexte.
 
-Lors des appels ultérieurs à la commande `deploy`, il suffit de passer la même target,
-et les options de déploiement seront automatiquement récupérées depuis le fichier `deploy.json`, soit :
-
-    <devtool> deploy --target quickstart
-
-## Conclusion {#quickstart:12b5141e-7400-467b-87c0-458e487c9da3}
+## Conclusion {#dynacase-qs:12b5141e-7400-467b-87c0-458e487c9da3}
 
 Vous connaissez maintenant la structure des sources Dynacase, vous savez construire et déployer un module
 et avez abordé les principes des traductions.
 
-## Voir aussi {#quickstart:bbe5ad1c-1aa3-4ae4-ba5d-a16b60999bed}
+## Voir aussi {#dynacase-qs:bbe5ad1c-1aa3-4ae4-ba5d-a16b60999bed}
 
 -   [Les sources après le tutoriel][githubSource]
 -   [Le format des paquets webinst][webinst]
@@ -311,9 +312,9 @@ et avez abordé les principes des traductions.
 [wpoedit]: https://en.wikipedia.org/wiki/Poedit "Description de Poedit : Wikipedia"
 [upoedit]: http://www.poedit.net/download.php "Téléchargement de Poedit"
 [webinst]: http://docs.anakeen.com/dynacase/3.2/dynacase-doc-platform-operating-manual/website/book/module.html "Le format des paquets webinst"
-[manref_internationalisation]: http://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1.html#core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1 "Internationalisation et traduction"
-[manref_internationalisation_php]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:ca73ff9e-ceb8-456b-bdd4-9b9056f1543d.html#core-ref:967cd878-e068-4c99-8266-adaed3f700ff "Utiliser une traduction dans un programme PHP"
+[manref_internationalisation]: #core-ref:1de9ba03-a3b6-4b56-bfbe-62ce991f8ca1 "Internationalisation et traduction"
+[manref_internationalisation_php]: #core-ref:967cd878-e068-4c99-8266-adaed3f700ff "Utiliser une traduction dans un programme PHP"
 [url_toolkit]: https://github.com/Anakeen/development-tools/raw/3.2/dynacase-devtool.phar
-[annexe_toolkit]: #quickstart:afe5e4fc-97c4-46d6-9583-94daa33919f1
-[annexe_buildjson]: #quickstart:f0fb9907-44e1-4956-aea1-14beb5cc077c
+[devtools:index]: #devtools:
+[devtools:buildjson]: #devtools:f0fb9907-44e1-4956-aea1-14beb5cc077c
 [tuto_images]: https://github.com/Anakeen/dynacase-quick-start-code/tree/master/Images

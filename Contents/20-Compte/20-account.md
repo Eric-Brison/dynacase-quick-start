@@ -1,57 +1,103 @@
-# Initialisation des comptes {#quickstart:b4800208-9c02-45bc-badc-9948c2277eae}
+# Initialisation des comptes {#dynacase-qs:b4800208-9c02-45bc-badc-9948c2277eae}
 
-## Objectifs {#quickstart:d3ca62ec-47fb-42a9-8402-3c580a6382f7}
+## Objectifs {#dynacase-qs:d3ca62ec-47fb-42a9-8402-3c580a6382f7}
 
 -   Utiliser l'interface d'administration pour initialiser des comptes,
 -   Exporter les comptes,
--   Initialiser des comptes à l'aide des formats d'exports,
+-   Initialiser des comptes à l'aide des formats d'import,
 -   Produire le paquet `webinst` en important les comptes.
 
-## Cadre {#quickstart:fdbc640b-3030-45f5-ad2f-486d3eead6c3}
+## Cadre {#dynacase-qs:fdbc640b-3030-45f5-ad2f-486d3eead6c3}
 
-Lors de la phase de spécification, les éléments suivants ont été identifiés. L'application nécessite :
+Lors de la phase de spécification, les éléments suivants ont été identifiés. L'application nécessite :
 
 -   les _rôles_ :
+    -   Utilisateur COGIP
     -   Responsable des audits,
-    -   Auditeurs,
+    -   Auditeur,
     -   Administrateur fonctionnel.
 -   les _groupes_ :
     -   Utilisateurs COGIP,
     -   DSI,
     -   Section Risque Opérationnel et Qualité.
 
-De plus, une bonne pratique est de faire le lien entre les _utilisateurs_ et les _rôles_ au travers des _groupes_. Nous allons donc également créer les groupes suivants :
+De plus, une bonne pratique est de faire le lien entre les _utilisateurs_ et les _rôles_ au travers des _groupes_.
+Nous allons donc également créer les groupes suivants :
 
 -   Responsable des audits,
 -   Auditeurs,
 -   Administrateur fonctionnel.
 
-De plus, l'application doit être initialisée avec les utilisateurs suivants :
+Enfin, l'application doit être initialisée avec les utilisateurs suivants :
 
--   Jean Martin :
+-   Jean Martin :
     -   section Risque Opérationnel et Qualité,
     -   auditeur,
--   Priscilla Arthaud : 
+-   Priscilla Arthaud :
     -   section Risque Opérationnel et Qualité,
     -   auditeur,
--   Arnaud Luc : 
+-   Arnaud Luc :
     -   section Risque Opérationnel et Qualité,
     -   auditeur,
--   Karine Marthe : 
+-   Karine Marthe :
     -   section Risque Opérationnel et Qualité,
     -   auditeur,
     -   responsable des audit,
     -   administrateur fonctionnel,
--   Marina Arnic :
+-   Marina Arnic :
     -   responsable de la DSI,
     -   administrateur fonctionnel.
 
-## Initialisation du premier utilisateur {#quickstart:653a946b-9655-4728-9c65-50c90bb771df}
+Les arborescences de rôles, groupes et utilisateurs définis sont les suivants :
+
+-   __Utilisateurs COGIP__
+    +   Rôles :
+        *   _Utilisateur COGIP_
+    +   Membres directs
+    +   Sous-groupes :
+        *   __DSI__
+            -   Rôles
+            -   Membres directs
+                +   _Marina Arnic_
+            -   Sous-groupes
+        *   __Auditeurs__
+            -   Rôles
+                +   _Auditeur_
+            -   Membres directs
+            -   Sous-groupes
+                +   __Responsables des audits__
+                    *   Rôles
+                        -   _Responsable des audits_
+                    *   Membres directs
+                        -   _Karine Marthe_
+                    *   Sous-groupes
+                +   __Section Risque Opérationnel et Qualité__
+                    *   Rôles
+                    *   Membres directs
+                        -   _Jean Martin_
+                        -   _Priscilla Arthaud_
+                        -   _Arnaud Luc_
+                        -   _Karine Marthe_
+                    *   Sous-groupes
+        *   __Administrateurs fonctionnels__
+            -   Rôles
+                +   _Administrateur fonctionnel_
+            -   Membres directs
+                +   _Karine Marthe_
+                +   _Marina Arnic_
+            -   Sous-groupes
+
+<span class="flag inline nota-bene"></span> Nous avons choisi de respecter les bonnes pratiques
+et de ne donner aucun rôle directement à un utilisateur.
+Ainsi, les rôles des utilisateurs sont obtenus par leurs groupes d'appartenance (directs et indirects).
+L'administrateur n'a donc pas à se demander de quels droits dispose un nouvel utilisateur,
+il suffit de mettre l'utilisateur dans le(s) groupe(s) métier qui lui correspondent.
+
+## Interface de gestion des utilisateurs {#dynacase-qs:08baa9d0-d741-4509-b5c5-7b72e74399c3}
 
 Pour initialiser les différents types de comptes, vous pouvez utiliser l'interface web.
-Veuillez vous rendre sur l'interface d'administration : `http://<nomDeDomaine>/dynacase/admin.php`
-
-Et cliquer sur `Gestion des utilisateurs`
+Veuillez vous rendre sur l'interface d'administration : `http://<nomDeDomaine>/dynacase/admin.php`,
+puis cliquer sur `Gestion des utilisateurs`.
 
 ![ Création d'utilisateur ](20-10-users.png "Création d'utilisateurs")
 
@@ -60,9 +106,74 @@ Cette interface permet de créer des utilisateurs, des groupes et des rôles.
 <span class="flag inline nota-bene"></span> Vous pouvez replier la partie gauche de l'interface en cliquant sur le
 bouton tout en haut à gauche.
 
+## Initialisation des comptes {#dynacase-qs:a8db534a-251b-41a6-927e-0e4dc259b776}
+
+Vous allez dans un premier temps créer un rôle, un groupe, puis un utilisateur depuis l'interface.
+la création se fera dans cet ordre car :
+
+-   le groupe référence le rôle
+-   l'utilisateur référence le groupe
+
+Dans un second temps, les documents ainsi créés seront exportés.
+
+Enfin, vous utiliserez les formats d'import et d'export pour créer les autres rôles, groupes et utilisateurs.
+
+<span class="flag inline nota-bene"></span> Tous les éléments nécessaires au paramétrage de l'application
+doivent être importés pour permettre les installations et mises à jour de l'application
+dans divers environnements (développement, pré-production, production).
+
+### Initialisation du premier rôle {#dynacase-qs:1a5c2498-c522-491b-a7a3-f73d03b13116}
+
+Pour créer un rôle, veuillez vous rendre dans
+[l'interface de gestion des utilisateurs][dynacase-qs:users],
+puis cliquer sur `tous les rôles`.
+
+![ Rôle : liste des rôles ](20-10-role-creation.png "Rôle : liste des rôles")
+
+Appuyez ensuite sur `Créer un rôle`, un formulaire est affiché.
+Vous devez compléter le champ obligatoire :
+
+-   _Libellé_ : `Utilisateurs COGIP`.
+
+Appuyez ensuite sur le bouton `Créer`.
+
+Le rôle nouvellement créé s'affiche :
+
+![ Rôle : Création ](20-10-role-creation2.png "Rôle : Création")
+
+### Initialisation du premier groupe {#dynacase-qs:78e478c8-e1bf-4766-9ae1-de45e13e3068}
+
+Pour créer un groupe, veuillez vous rendre dans
+[l'interface de gestion des utilisateurs][dynacase-qs:users],
+puis cliquer sur `tous les groupes`.
+
+![ Groupe : liste des groupes ](20-10-group-creation.png "Groupe : liste des groupes")
+
+Appuyez ensuite sur `Créer un groupe d'utilisateur`, un formulaire est affiché.
+Vous devez compléter les deux champs obligatoires :
+
+-   _Nom_ : `Utilisateurs COGIP`,
+-   _Identifiant_ : `GRP_USER_COGIP`.
+-   _Rôles associés_ : `Utilisateur COGIP`
+
+Appuyez ensuite sur le bouton `Créer`.
+
+Le groupe nouvellement créé s'affiche :
+
+![ Groupe : Création ](20-10-group-creation2.png "Groupe : Création")
+
+Vous allez maintenant indiquer que ce groupe est un sous-groupe du groupe `Utilisateurs`.
+Pour cela, utilisez le menu `Modifier la hiérarchie` et cliquez sur `Utilisateurs` dans la nouvelle fenêtre :
+
+![ Groupe : Modification de la hiérarchie ](20-10-group-creation3.png "Groupe : Modification de la hiérarchie")
+
+Puis cliquez sur le menu `sauver`.
+
+### Initialisation du premier utilisateur {#dynacase-qs:653a946b-9655-4728-9c65-50c90bb771df}
+
 Pour créer un utilisateur, veuillez cliquer sur le bouton `Créer un utilisateur`, l'interface de création apparaît :
 
-![ Création d'utilisateur ](20-10-creation-user.png "Création d'utilisateur")
+![ Utilisateur : création ](20-10-user-creation1.png "Utilisateur : création")
 
 Veuillez compléter le formulaire en fournissant les nom, prénom, login, mail et mot de passe de l'utilisateur :
 
@@ -76,7 +187,7 @@ Ensuite cliquez sur le bouton `Créer`.
 
 Votre utilisateur est ajouté et est affiché.
 
-![ Création d'utilisateur ](20-10-creation-user-done.png "Création d'utilisateur")
+![ Utilisateur : création ](20-10-user-creation2.png "Utilisateur : création")
 
 Les utilisateurs ont quelques spécificités, vous pouvez :
 
@@ -86,382 +197,427 @@ Les utilisateurs ont quelques spécificités, vous pouvez :
     ne peut plus se connecter à plateforme,
 -   désactiver le compte à l'aide du menu `Compte`.
 
-## Export du premier utilisateur {#quickstart:137414aa-e378-4ece-b343-6e0ddc4d27c0}
+Vous allez maintenant indiquer que l'utilisateur est membre du groupe `Utilisateurs COGIP`.
+Pour cela, utilisez le menu <kbd class="menu"><kbd><samp>Gestion du compte</samp></kbd>&gt;
+<kbd><samp>Changer de groupes</samp></kbd></kbd>
+et cliquez sur `Utilisateurs` dans la nouvelle fenêtre pour le désélectionner, puis cliquez sur `Utilisateurs COGIP`
+pour le sélectionner :
 
-Vous allez maintenant exporter cet utilisateur pour pouvoir l'importer avec le paquet d'installation.
+![ Utilisateur : Modification de la hiérarchie ](20-10-user-creation3.png "Utilisateur : Modification de la hiérarchie")
 
-Tous les éléments nécessaires au paramétrage de l'application doivent être importés pour permettre les installations et
-mises à jour de l'application dans divers environnements (développement, pré-production, production).
+<span class="flag inline nota-bene"></span> `Utilisateurs` est en bleu, alors que `Utilisateurs COGIP` est en vert.
+Cela signifie que l'utilisateur est __membre direct__ du groupe `Utilisateurs COGIP`,
+alors qu'il est __membre indirect__ du groupe `Utilisateurs` (en effet, il est membre d'un de ses sous-groupes).
 
-### Mise en place du nom logique {#quickstart:6124a031-bc16-4182-ae7e-9b659b918905}
+Puis cliquez sur le menu `sauver`.
 
-Pour pouvoir référencer l'utilisateur entre les différents contextes, vous allez lui attribuer un **nom logique**.
-Le nom logique (chaîne de caractères) est un identifiant unique au sein d'un contexte. Il permet de retrouver le document.
+### Export des comptes {#dynacase-qs:137414aa-e378-4ece-b343-6e0ddc4d27c0}
 
-Vous devez cliquer sur le menu `Autres` et le sous-menu `Propriétés` de la fiche utilisateur.
+Vous allez maintenant exporter les comptes créés. Veuillez fermer la fiche utilisateur,
+et utiliser les filtres dans la grille pour ne voir que cet utilisateur dans la liste.
 
-Le formulaire suivant est affiché :
+![ Utilisateur : export ](20-10-user-export1.png "Utilisateur : export")
 
-![ Utilisateur : nom logique ](20-10-user-logical-name.png "Utilisateur : nom logique")
+Cliquez ensuite sur le bouton Exporter les utilisateurs. La fenêtre suivante s'ouvre :
 
-Pour compléter le nom logique, veuillez cliquer sur `affecter un nom logique`.
-Un champ apparaît et vous allez saisir le nom logique `USER_JEAN_MARTIN` et ensuite cliquer sur `Nom à appliquer`.
+![ Utilisateur : export ](20-10-user-export2.png "Utilisateur : export")
 
-L'interface de saisie du nom logique est présentée à nouveau avec cette fois le nom logique affiché en son centre.
+Cette fenêtre affiche les options d'export, ainsi que la liste des groupes qui seront exportés
+(dans notre cas, il est indiqué `Sélection : Tous les groupes, Identifiant : cogip`,
+ce qui correspond à notre filtrage).
 
-Veuillez fermer la fenêtre de propriétés.
+Choisissez les options suivantes :
 
-#### Export  {#quickstart:3fee7d00-3ee4-4ced-ba78-b6c37e36ad6d}
+-   Exporter avec les schémas XML : Oui
+    
+    Les xsd ont déjà été exportées avec les comptes, il n'est pas nécessaire de les télécharger plusieurs fois.
+    Toutefois, activer cette option inclut dans le xml la référence à la xsd,
+    ce qui sera utile lors de la mise à jour du fichier _à la main_
+    
+-   Exporter les mots de passe cryptés : Oui
+    
+    Indique que les mots de passe doivent être exportés.
+    Comme dynacase ne stocke pas les mots de passe en clair, seul le hash correspondant peut être exporté.
+    Sans cette option, le mot de passe est vide (et les utilisateurs importés ne peuvent donc pas se connecter).
+    
+-   Exporter les rôles associés : Oui
+    
+    Indique que les rôles référencés par cet utilisateur seront également exportés.
+    
+-   Exporter les groupes des utilisateurs : Oui
+    
+    Indique que les groupes référencés par cet utilisateur seront également exportés.
+    
+-   Exporter les données documentaires spécifiques : Oui
+    
+    Indique que les informations du document (comme le libellé) seront également exportées.
+    Sans cette option, seules les données systèmes du rôle sont exportées.
 
-Vous allez maintenant exporter le document. Veuillez cliquer sur `Autres` et ensuite sur `Ajouter au porte-document`.
+Puis cliquez sur exporter les comptes.
 
-<span class="flag inline nota-bene"></span>  Si jamais la fonctionnalité `Ajouter au porte-document` n'est pas présente,
-veuillez vous rendre dans l'application `Gestion des documents` > `Explorateur de documents` et revenez ensuite sur 
-l'application `Gestion des utilisateurs`.
+Vous obtenez un fichier zip contenant :
 
-La fenêtre suivante s'ouvre :
+-   un répertoire `XSD`
+    
+    Déposez ce répertoire à la racine du module.
+    <span class="flag inline nota-bene"></span> puisque ce répertoire n'est pas référencé dans le fichier
+    [`build.json`][dynacase-qs:build.json], il ne sera pas déployé. ce répertoire ne sert qu'au développement.
+    
+-   un fichier xml
+    
+    Déposez ce fichier dans le répertoire `COGIP_AUDIT` sous le nom `accounts.xml`.
+    
+    Puisque les options __Exporter les rôles associés__ et __Exporter les groupes des utilisateurs__
+    ont été sélectionnées, le xml généré contient les données du rôle, du groupe et de l'utilisateur
+    nouvellement créés.
+    
+    Le fichier xml correspondant peut être téléchargé [ici][github:accounts.xml]
 
-![ Utilisateur : export ](20-10-user-export.png "Utilisateur : export")
+## Ajout des nouveaux comptes dans le fichier d'import {#dynacase-qs:1d608a55-3178-48ed-9ed3-216b3920d07e}
 
-Cette fenêtre affiche les documents qui vont être exportés.
+### Format d'import / export {#dynacase-qs:9f1e3e32-bb48-4e6b-807a-37ff31c0f705}
 
-Veuillez ensuite cliquer sur `Outils > Exportation du dossier`, la fenêtre suivante s'ouvre :
+Le format du xml est défini dans [le manuel de référence][core-ref:xml_accounts].
 
-![ Utilisateur : export ](20-10-user-export2.png "Utilisateur : export")
+### Ajout des instructions d'import {#dynacase-qs:bef50695-1c40-485b-97a2-928c2c8a591c}
 
-Veuillez cliquer sur `Exporter` en laissant les options par défaut.
+Il vous reste à ajouter l'instruction d'import du fichier dans le fichier `info.xml`.
 
-Un fichier CSV vous est proposé au téléchargement, celui-ci est encodé avec les paramètres suivants :
-
--   Jeu de caractères : `UTF8`,
--   Séparateur de cellule : `;`,
--   Séparateur de texte : ``.
-
-Le logiciel conseillé pour ouvrir ces documents est Libre Office. Avec ce logiciel, le fenêtre de paramétrage avant ouverture du fichier est :
-
-![ Utilisateur : export ](20-10-user-export3.png "Utilisateur : export")
-
-Vous retrouvez ensuite le contenu suivant :
-
-![ Utilisateur : CSV ](20-10-user-export4.png "Utilisateur : CSV")
-
-Ce fichier contient l'ensemble des valeurs contenues dans la fiche utilisateur **à l'exception des mots de passe qui, étant encodés en base, ne sont pas exportables.**
-
-### Format d'export {#quickstart:9f1e3e32-bb48-4e6b-807a-37ff31c0f705}
-
-Le format d'export CSV repose sur quelques mots clefs, les deux mots utilisés dans le fichier produit sont :
-
--   `DOC` : le mot clef doc indique que toute la ligne contient des valeurs à associer à un document existant ou à créer,
--   `ORDER` : le mot clef order indique à quoi correspond le contenu de chaque colonne.
-
-Vous devez ensuite supprimer les colonnes qui ne sont pas utiles.
-
-<span class="flag inline nota-bene"></span> **Il est nécessaire de supprimer au moins la colonne `us_whatid`**.
-En effet cette colonne contient la référence interne vers l'utilisateur.
-Elle n'est d'aucune utilité et cause des incompatibilités à l'import sur une autre base.
-
-Dans notre cas, vous allez conserver uniquement les colonnes correspondant aux éléments que vous avez complétés ci-dessus, soit :
-
--   les 4 premières colonnes,
--   _Nom_ : `us_lname`,
--   _Prénom_ : `us_fname`,
--   _Mail_ : `us_mail`,
--   _Login_ : `us_login`,
--   _Nouveau mot de passe_ : `us_passwd1`,
--   _Confirmation mot de passe_ : `us_passwd2`.
-
-Une fois le fichier nettoyé vous obtenez les lignes suivantes :
-
-![ Utilisateur : CSV ](20-10-user-export5.png "Utilisateur : CSV")
-
-Vous devez ensuite enregistrer le fichier dans les sources du projet que vous avez initialisé précédemment.
-Utilisez la sauvegarde de votre tableur, les options de sauvegarde doivent être similaire à celle de lecture :
-
--   Jeu de caractères : `UTF8`,
--   Séparateur de cellule : `;`,
--   Séparateur de texte : ``.
-
-Sauvez le fichier dans le répertoire `COGIP_AUDIT` sous le nom `IUSER__INIT_DATA.csv`.
-
-<span class="flag inline nota-bene"></span> Le nom est normalement laissé à votre appréciation.
-Dans le cadre de ce tutoriel, nous utilisons une nomenclature qui vous est présentée en [annexe][annexe].
-
-Il vous reste à ajouter l'instruction d'import du fichier dans le fichier `info.xml`. 
-
-Ce fichier déclare les actions réalisées lors de l'installation ou la mise à jour du paquet. 
+Ce fichier déclare les actions réalisées lors de l'installation ou la mise à jour du paquet.
 Vous allez donc ajouter la ligne suivante pour demander l'import des utilisateurs :
 
     [xml]
-    <process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/IUSER__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>
+    <process command='./wsh.php --api=importAccounts --file=COGIP_AUDIT/accounts.xml'/>
 
-entre les lignes de la partie installation (`post-install`):
+-   dans le bloc `<post-install></post-install>` (actions à réaliser après le déploiement des fichiers lors d'une installation)
+    entre les lignes
+    
+        [xml]
+        <process command="programs/record_application COGIP_AUDIT" />
+    et
+        [xml]
+        <process command="programs/update_catalog" />
+-   dans le bloc `<post-upgrade></post-upgrade>` (actions à réaliser après le déploiement des fichiers lors d'une mise à jour)
+    entre les lignes
+    
+        [xml]
+        <process command="programs/record_application COGIP_AUDIT"/>
+    et
+        [xml]
+        <process command="programs/post_migration COGIP_AUDIT"/>
+
+Le fichier xml complété peut-être consulté [ici][github:info.xml].
+
+### Ajout des autres comptes {#dynacase-qs:28c4dbb7-97ea-4902-94ca-7e04db2d6d43}
+
+#### Paramétrage de la xsd {#dynacase-qs:33074523-ab44-49f3-8a89-cf5f24a60486}
+
+En ouvrant le fichier `COGIP_AUDIT/accounts.xml`, vous pouvez constater qu'il référence le schéma `accounts.xsd`
+(`xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSD/accounts.xsd"`).
+Toutefois, puisque nous avons déposé le répertoire XSD à la racine du contexte,
+nous pouvons redéfinir son emplacement en remplaçant la ligne précédente par
+
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/accounts.xsd"
+
+<span class="flag inline nota-bene"></span> cette étape n'est pas obligatoire.
+Toutefois, si votre IDE supporte les xsd, le xml sera validé au fur et à mesure de sa complétion,
+et l'IDE pourra même vous proposer de l'auto-completion.
+
+#### renommage du rôle {#dynacase-qs:e08713c5-3885-4a5d-9e77-6de66be1b6a4}
+
+Vous remarquez que le rôle qui a été créé via l'interface contient une référence aléatoire.
+Étant donné que la référence sera utilisée dans le profilage, vous allez remplacer cette référence.
+Toutefois, la référence servant de clé d'identification du rôle,
+l'import d'un rôle avec le même libellé (`displayName`), mais une `référence` différente ne fera pas une mise à jour,
+mais va créer un nouveau rôle. il faut donc :
+
+-   remplacer toutes les occurrences de cette référence aléatoire par une référence compréhensible
+    (`role_utilisateurs_cogip`)
+-   supprimer le rôle `Utilisateurs COGIP` avec la référence aléatoire depuis l'interface Dynacase.
+
+#### Ajout des rôles {#dynacase-qs:b7d88777-6d2b-43a1-baf5-e1c4927dd3fe}
+
+Dans la section `<roles/>`, nous allons ajouter les 2 rôles manquants :
+
+-   _Auditeur_
+-   _Administrateur fonctionnel_
+
+Le bloc `<roles></roles>` a donc le contenu suivant :
 
     [xml]
-    <process command="programs/record_application COGIP_AUDIT" />
-    <process command="programs/update_catalog" />
-
-Le fichier CSV complété peut-être consulté [ici][source_iuser].
-
-## Ajout des autres utilisateurs {#quickstart:28c4dbb7-97ea-4902-94ca-7e04db2d6d43}
-
-Vous pouvez utiliser l'interface pour créer les autres utilisateurs. Ce fonctionnement est assez vite fastidieux.
-Vous allez donc créer les autres utilisateurs directement en modifiant le fichier `IUSER__INIT_DATA.csv`.
-
-Ouvrez le et faites un copié collé de la première ligne commençant par DOC (ligne 3) et vous complétez avec le listing
-d'utilisateurs identifiés pendant la phase de spécification.
-
-<span class="flag inline nota-bene"></span> Le nom logique (colonne 3) doit être unique pour
-chaque utilisateur. Il faut donc penser à changer le nom logique des lignes ainsi obtenues, en plus des éléments
-tels que nom, prénom…
-
-Vous devez obtenir un résultat similaire à :
-
-![ Utilisateur : CSV ](20-10-user-export6.png "Utilisateurs : CSV")
-
-Au prochain import de votre paquet, si vous choisissez la stratégie d'initialisation, les utilisateurs que vous avez
-ajoutés ici seront ajoutés à la base.
-
-Le fichier CSV complété peut-être consulté [ici][source_iuser].
-
-<span class="flag inline nota-bene"></span> Vous pouvez à tout moment générer le fichier `webinst` via la commande :
-
-`<devtool> generateWebinst -s .`
-
-et le déployer en choississant la stratégie d'initialisation pour tester l'ajout des utilisateurs.
-
-Si vous déployez, vous aurez la liste suivante :
-
-![ Groupe ](20-10-user-imported.png "Utilisateur après importation")
-
-## Création des groupes {#quickstart:78e478c8-e1bf-4766-9ae1-de45e13e3068}
-
-Vous allez maintenant créer les groupes. La procédure est similaire à celle de création d'utilisateurs.
-
-Retournez dans l'interface d'administration, cliquez sur gestion des utilisateurs et ensuite sur `tous les groupes`.
-
-![ Groupe ](20-10-group-creation.png "Groupe")
-
-Appuyez ensuite sur `Créer un groupe d'utilisateur`, un formulaire est affiché. Vous devez compléter les deux champs obligatoires :
-
--   _Nom_ : `Utilisateurs COGIP`,
--   _Identifiant_ : `GRP_USER_COGIP`.
-
-Appuyez ensuite sur le bouton `Créer`.
-
-Ajoutez un nom logique à ce groupe, `Autres > Propriétés > Affecter un nom logique`.
-
--   Nom logique : `GRP_USER_COGIP`
-
-Ensuite, vous allez exporter le groupe, `Autres > Ajouter au porte-documents`. Le porte-documents s'ouvre :
-
-![ Groupe ](20-10-group-creation2.png "Groupe")
-
-Vous pouvez remarquer qu'il reste dans le porte-documents l'utilisateur précédemment sélectionné.
-Le porte-documents permet d'exporter plusieurs documents en une seule fois.
-Dans votre cas, vous allez l'enlever du porte-documents, en faisant un clic droit sur le document `Martin Jean` et en
-cliquant sur le menu `Supprimer la référence`.
-
-Cliquez ensuite sur `Outils > Exportation du dossier` et sur le bouton `Exporter` dans l'interface suivante.
-
-Un fichier CSV vous est retourné comme précédemment.
-
-Ouvrez le et supprimez les colonnes non nécessaires pour ne garder que :
-
--   les 4 premières colonnes,
--   la colonne _Nom_ : `grp_name`,
--   la colonne _Identifiant_ : `us_login`.
-
-Enregistrez le fichier dans le répertoire `COGIP_AUDIT` sous le nom `IGROUP__INIT_DATA.csv`.
-
-Ensuite, ajoutez dans le fichier `info.xml` l'instruction suivante :
-`<process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/IGROUP__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>`
-
-Les groupes contenant les utilisateurs, ils doivent être importés *avant* les utilisateurs.
-
-Ce qui donne l'ordre suivant pour la procédure d'installation :
-
-        <process command="programs/record_application COGIP_AUDIT"/>
-        <process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/IGROUP__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>
-        <process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/IUSER__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>
-        <process command="programs/update_catalog"/>
-
-Pour créer les autres groupes, de la même manière que pour les utilisateurs, vous pouvez dupliquer la 3ème ligne.
-
-Vous obtenez un listing semblable au suivant :
-
-![ Liste des groupes ](20-10-group-creation3.png "Liste des groupes")
-
-Vous devez maintenant construire la hiérarchie des groupes. La colonne `D` permet d'indiquer qu'un groupe est contenu dans un autre.
-Tous les groupes sont contenus dans le groupe `GRP_USER_COGIP`, vous allez donc compléter la colonne `D` pour l'indiquer.
-
-Vous allez donc indiquer que :
-
-* le groupe `Utilisateurs COGIP` est contenu dans le groupe par défaut (`GDEFAULT`),
-* les autres groupes appartiennent à `Utilisateurs COGIP`.
-
-Vous obtenez un listing semblable au suivant :
-
-![ Liste des groupes ](20-10-group-creation4.png "Liste des groupes")
-
-<span class="flag inline nota-bene"></span> Vous pouvez associer un groupe à plusieurs groupes parents.
-La ligne définissant le groupe est dupliquée en ne conservant que les quatre premières colonnes.
-La colonne `D` est modifiée avec le nouveau groupe parent. Vous pouvez effectuer cette opération autant de fois que nécessaire.
-
-Une fois l'ensemble des manipulations effectuées, le fichier doit être semblable à [celui-ci][source_igroup].
-
-Si vous générez le webinst et que vous l'installez en choisissant l'option `Install`, vous aurez ensuite le listing suivant :
-
-![ Liste des groupes ](20-10-group-creation5.png "Liste des groupes")
-
-## Association des utilisateurs aux groupes {#quickstart:0ac2eeca-c96e-46fc-b79f-4bf77404cc93}
-
-L'association des utilisateurs aux groupes se passe de la même manière. Veuillez ouvrir le fichier `IUSER__INIT_DATA.csv`
-et compléter la colonne `D` pour indiquer pour chaque utilisateur à quel groupe il appartient.
-
-Soit :
-
--   `USER_JEAN_MARTIN` : `GRP_QUALITE_COGIP`,
--   `USER_PRISCILLA_ARTHAUD` : `GRP_QUALITE_COGIP`,
--   `USER_ARNAUD_LUC` : `GRP_QUALITE_COGIP`,
--   `USER_KARINE_MARTHE` : `GRP_QUALITE_COGIP`,
--   `USER_MARINA_ARNIC` : `GRP_DSI_COGIP`.
-
-et sauvez le fichier. Celui peut-être consulté [ici](https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-user-add-group/COGIP_AUDIT/IUSER__INIT_DATA.csv).
-
-## Création des rôles {#quickstart:1a5c2498-c522-491b-a7a3-f73d03b13116}
-
-Vous allez maintenant créer les rôles. La procédure est similaire à celle de création des utilisateurs.
-
-Pour cela, retournez dans l'interface d'administration, cliquez sur gestion des utilisateurs et ensuite sur `tous les rôles`.
-
-![ Rôle ](20-10-role-creation.png "Rôle")
-
-Appuyez ensuite sur `Créer un Rôle`, un formulaire est affiché. Vous devez compléter le champ obligatoire :
-
--   _Libellé_ : `Responsable des audits`.
-
-Appuyez ensuite sur le bouton `Créer`.
-
-Ajouter un nom logique à ce rôle, `Autres > Propriétés > Affecter un nom logique`.
-
--   _Nom logique_ : `ROLE_RESPONSABLE_AUDITS`
-
-Ensuite, vous allez exporter le rôle, `Autres > Ajouter au porte-documents`. Le porte-documents s'ouvre :
-
-Pensez à supprimer du porte-documents le groupe précédemment ajouté en faisant un clic droit sur le document  et en cliquant sur le menu `Supprimer la référence`.
-
-Cliquez ensuite sur `Outils > Exportation du dossier` et sur le bouton `Exporter` dans l'interface suivante.
-
-Un fichier CSV vous est retourné.
-
-Ouvrez le et supprimez les colonnes inutiles, pour ne garder que :
-
--   les 4 premières colonnes,
--   _Référence_ : `role_login`,
--   _Libellé_ : `role_name`.
-
-Sauvez le fichier dans le répertoire `COGIP_AUDIT` sous le nom `ROLE__INIT_DATA.csv`.
-
-Ensuite, ajoutez dans le fichier info.xml l'instruction suivante : 
-`<process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/ROLE__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>`
-
-Les rôles pouvant être associés aux groupes et aux utilisateurs, ils doivent être importés en premier.
-
-Ce qui donne pour la procédure d'installation :
-
-    <process command="programs/record_application COGIP_AUDIT"/>
-    <process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/ROLE__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>
-    <process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/IGROUP__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>
-    <process command='./wsh.php --api=importDocuments  --file=./COGIP_AUDIT/IUSER__INIT_DATA.csv --csv-separator=&apos;;&apos;'/>
-    <process command="programs/update_catalog"/>
-
-En procédant comme pour les utilisateurs ou les groupes, vous allez initialiser les autres rôles (duplication de la ligne contenant l'instruction `DOC`).
-
-Les rôles sont les suivants :
-
--   Responsable des audits : `ROLE_RESPONSABLE_AUDITS`,
--   Auditeurs : `ROLE_AUDITEUR`,
--   Administrateur fonctionnel : `ROLE_ADMIN_FONCTIONNEL`.
-
-Après ajout des rôles définis lors de la phase de d'analyse, on obtient :
-
-![ Rôle ](20-10-role-creation2.png "Rôle")
-
-Une fois initialisé le fichier de rôle est semblable à [celui-ci](https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-role/COGIP_AUDIT/ROLE__INIT_DATA.csv).
-
-### Association des rôles aux groupes et utilisateurs {#quickstart:e946f46a-9d47-4f44-a61d-45248f47ce62}
-
-Vous allez maintenant conclure la partie pratique de ce chapitre en associant les rôles aux utilisateurs et aux groupes.
-
-<span class="flag inline nota-bene"></span> Afin de garantir une meilleure évolutivité de l'application, il est recommandé
-de passer par un _groupe_ pour faire l'association entre _utilisateurs_ et _rôles_. Ainsi, les
-administrateurs n'ont pas à gérer les rôles, mais uniquement l'appartenance des utilisateurs aux groupes.
-
-Cette association se fait dans les fichiers de définition des groupes.
-
-Dans le fichier `IGROUP__INIT_DATA.csv`, vous allez ajouter une colonne nommée `grp_roles` après la colonne `us_login`.
-
-L'analyse a mis en évidence que les membres du groupe `Section Risque Opérationnel et Qualité` sont `auditeurs`.
-Vous allez donc affecter le rôle à ce groupe.  
-
-En ajoutant la valeur `ROLE_AUDITEUR` dans la nouvelle colonne à la ligne du document `GRP_QUALITE_COGIP`, vous associez le rôle et le groupe.
-Tous les utilisateurs présents dans ce groupe posséderont donc ce rôle.
-
-![ Rôle association ](20-10-role-association2.png "Association des rôles : groupes")
-
-De plus, _Karine Marthe_ et _Marina Arnic_ sont _administrateur fonctionnel_, et _Karine Marthe_ est _responsable des audit_.
-
-Pour associer, les utilisateurs au rôle, vous devez ouvrir le fichier `IUSER__INIT_DATA.csv` et ajouter la colonne `us_roles` après la colonne `us_passwd2`.
-
-Et, vous allez compléter la nouvelle colonne avec les valeurs suivantes :
-
-* pour `USER_KARINE_MARTHE` : `ROLE_RESPONSABLE_AUDITS\nROLE_ADMIN_FONCTIONNEL`,
-* pour `USER_MARINA_ARNIC` : `ROLE_ADMIN_FONCTIONNEL`.
-
-<span class="flag inline nota-bene"></span> Vous pouvez remarquez que l'association d'un compte à plusieurs rôle se fait
-avec le séparateur `\n` entre deux rôles.
-
-Ce qui donne le résultat suivant :
-
-![ Rôle association : utilisateurs](20-10-user-role.png "Association des rôles : utilisateurs")
-
-Vous pouvez retrouver les fichiers complétés [dans les sources](https://github.com/Anakeen/dynacase-quick-start-code/tree/3.2-associate-role-account/COGIP_AUDIT).
-
-## Mise en place des modifications {#quickstart:c7522c13-68ab-47c7-b592-6c672b963820}
+    <roles>
+      <role id="13">
+        <reference>role_utilisateurs_cogip</reference>
+        <displayName>Utilisateur COGIP</displayName>
+        <document family="ROLE">
+          <role title="Utilisateur COGIP" revision="0" modification-date="2016-04-20T13:42:00" version="" state=""/>
+        </document>
+      </role>
+      <role>
+        <reference>role_responsable_audit</reference>
+        <displayName>Responsable des audits</displayName>
+        <document family="ROLE">
+          <role title="Responsable des audits"/>
+        </document>
+      </role>
+      <role>
+        <reference>role_auditeur</reference>
+        <displayName>Auditeur</displayName>
+        <document family="ROLE">
+          <role title="Auditeur"/>
+        </document>
+      </role>
+      <role>
+        <reference>role_admin_fonc</reference>
+        <displayName>Administrateur fonctionnel</displayName>
+        <document family="ROLE">
+          <role title="Administrateur fonctionnel"/>
+        </document>
+      </role>
+    </roles>
+
+#### Ajout des groupes {#dynacase-qs:5269e199-4dfa-4d9c-936b-b7d568cd1a4d}
+
+Dans la section `<groups/>`, nous allons ajouter les 3 groupes manquants :
+
+-   _DSI COGIP_
+    +   membre du groupe _Utilisateurs COGIP_
+-   _Auditeurs_
+    +   membre du groupe _Utilisateurs COGIP_
+    +   rôle _Auditeur_
+-   _Administrateurs fonctionnels_
+    +   membre du groupe _Utilisateurs COGIP_
+    +   rôle _Administrateur fonctionnel_
+-   _Responsables des audits_
+    +   membre du groupe _Auditeurs_
+    +   rôle _Responsable des audits_
+-   _Section Risque Opérationnel et Qualité_
+    +   membre du groupe _Auditeurs_
+
+Le bloc `<groups></groups>` a donc le contenu suivant :
+
+    [xml]
+    <groups>
+      <group id="2">
+        <reference>all</reference>
+        <displayName>Utilisateurs</displayName>
+        <document family="IGROUP">
+          <igroup name="GDEFAULT" title="Utilisateurs" revision="0" modification-date="2016-04-20T14:09:04" version="" state=""/>
+        </document>
+      </group>
+      <group id="12">
+        <reference>grp_user_cogip</reference>
+        <displayName>Utilisateurs COGIP</displayName>
+        <associatedRoles reset="false">
+          <associatedRole reference="role_utilisateurs_cogip"/>
+        </associatedRoles>
+        <parentGroups reset="false">
+          <parentGroup reference="all"/>
+        </parentGroups>
+        <document family="IGROUP">
+          <igroup title="Utilisateurs COGIP" revision="0" modification-date="2016-04-20T14:40:10" version="" state=""/>
+        </document>
+      </group>
+      <group>
+        <reference>grp_dsi</reference>
+        <displayName>DSI</displayName>
+        <associatedRoles reset="false">
+        </associatedRoles>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_user_cogip"/>
+        </parentGroups>
+        <document family="IGROUP">
+          <igroup title="DSI"/>
+        </document>
+      </group>
+      <group>
+        <reference>grp_auditeurs</reference>
+        <displayName>Auditeurs</displayName>
+        <associatedRoles reset="false">
+          <associatedRole reference="role_auditeur"/>
+        </associatedRoles>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_user_cogip"/>
+        </parentGroups>
+        <document family="IGROUP">
+          <igroup title="Auditeurs"/>
+        </document>
+      </group>
+      <group>
+        <reference>grp_admin_fonc</reference>
+        <displayName>Administrateurs fonctionnels</displayName>
+        <associatedRoles reset="false">
+          <associatedRole reference="role_admin_fonc"/>
+        </associatedRoles>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_user_cogip"/>
+        </parentGroups>
+        <document family="IGROUP">
+          <igroup title="Administrateurs Fonctionnels"/>
+        </document>
+      </group>
+      <group>
+        <reference>grp_responsable_audit</reference>
+        <displayName>Responsables des audits</displayName>
+        <associatedRoles reset="false">
+          <associatedRole reference="role_responsable_audit"/>
+        </associatedRoles>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_auditeurs"/>
+        </parentGroups>
+        <document family="IGROUP">
+          <igroup title="Responsables des audits"/>
+        </document>
+      </group>
+      <group>
+        <reference>grp_section_risque_operationnel_qualite</reference>
+        <displayName>Section Risque Opérationnel et Qualité</displayName>
+        <associatedRoles reset="false">
+        </associatedRoles>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_auditeurs"/>
+        </parentGroups>
+        <document family="IGROUP">
+          <igroup title="Section Risque Opérationnel et Qualité"/>
+        </document>
+      </group>
+    </groups>
+
+#### Ajout des utilisateurs {#dynacase-qs:4ecc84f3-1fce-4edf-be30-c66c0b4fa54f}
+
+Dans la section `<users/>`, nous allons ajouter les utilisateurs manquants :
+
+-   Priscilla Arthaud :
+    -   Membre du groupe section Risque Opérationnel et Qualité,
+    -   Membre indirect du groupe auditeur,
+-   Arnaud Luc :
+    -   Membre du groupe section Risque Opérationnel et Qualité,
+    -   Membre indirect du groupe auditeur,
+-   Karine Marthe :
+    -   Membre du groupe section Risque Opérationnel et Qualité,
+    -   Membre du groupe responsable des audit,
+    -   Membre du groupe administrateur fonctionnel,
+    -   Membre indirect du groupe auditeur,
+-   Marina Arnic :
+    -   Membre du groupe responsable de la DSI,
+    -   Membre du groupe administrateur fonctionnel.
+
+Le bloc `<users></users>` a donc le contenu suivant :
+
+    [xml]
+    <users>
+      <user id="11">
+        <login>martin.jean</login>
+        <firstname>Jean</firstname>
+        <lastname>Martin</lastname>
+        <mail>martin.jean@quickstartcogip.com</mail>
+        <status activated="true"/>
+        <password crypted="true">$5$W5l3wgIyC3wKO6ML$Vl875jOLPfxZO8iM/Pvfc/NvV2CjoqGSfOPNUXBUM6B</password>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_section_risque_operationnel_qualite"/>
+        </parentGroups>
+        <document family="IUSER">
+          <iuser title="Martin Jean" revision="0" modification-date="2016-04-20T14:40:10" version="" state=""/>
+        </document>
+      </user>
+      <user>
+        <login>arthaud.priscilla</login>
+        <firstname>Priscilla</firstname>
+        <lastname>Arthaud</lastname>
+        <mail>arthaud.priscilla@quickstartcogip.com</mail>
+        <status activated="true"/>
+        <password crypted="true">$5$W5l3wgIyC3wKO6ML$Vl875jOLPfxZO8iM/Pvfc/NvV2CjoqGSfOPNUXBUM6B</password>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_section_risque_operationnel_qualite"/>
+        </parentGroups>
+        <document family="IUSER">
+          <iuser title="Arthaud Priscilla"/>
+        </document>
+      </user>
+      <user>
+        <login>luc.arnaud</login>
+        <firstname>Arnaud</firstname>
+        <lastname>Luc</lastname>
+        <mail>luc.arnaud@quickstartcogip.com</mail>
+        <status activated="true"/>
+        <password crypted="true">$5$W5l3wgIyC3wKO6ML$Vl875jOLPfxZO8iM/Pvfc/NvV2CjoqGSfOPNUXBUM6B</password>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_section_risque_operationnel_qualite"/>
+        </parentGroups>
+        <document family="IUSER">
+          <iuser title="Luc Arnaud"/>
+        </document>
+      </user>
+      <user>
+        <login>marthe.karine</login>
+        <firstname>Karine</firstname>
+        <lastname>Marthe</lastname>
+        <mail>marthe.karine@quickstartcogip.com</mail>
+        <status activated="true"/>
+        <password crypted="true">$5$W5l3wgIyC3wKO6ML$Vl875jOLPfxZO8iM/Pvfc/NvV2CjoqGSfOPNUXBUM6B</password>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_section_risque_operationnel_qualite"/>
+          <parentGroup reference="grp_responsable_audit"/>
+          <parentGroup reference="grp_admin_fonc"/>
+        </parentGroups>
+        <document family="IUSER">
+          <iuser title="Marthe Karine"/>
+        </document>
+      </user>
+      <user>
+        <login>arnic.marina</login>
+        <firstname>Marina</firstname>
+        <lastname>Arnic</lastname>
+        <mail>arnic.marina@quickstartcogip.com</mail>
+        <status activated="true"/>
+        <password crypted="true">$5$W5l3wgIyC3wKO6ML$Vl875jOLPfxZO8iM/Pvfc/NvV2CjoqGSfOPNUXBUM6B</password>
+        <parentGroups reset="false">
+          <parentGroup reference="grp_dsi"/>
+          <parentGroup reference="grp_admin_fonc"/>
+        </parentGroups>
+        <document family="IUSER">
+          <iuser title="Arnic Marina"/>
+        </document>
+      </user>
+    </users>
+
+et de changer le groupe parent de Jean Martin par `grp_section_risque_operationnel_qualite`
+
+## Mise en place des modifications {#dynacase-qs:c7522c13-68ab-47c7-b592-6c672b963820}
 
 Vous allez maintenant déployer vos modifications :
 
-    <devtool> deploy --target quickstart --url http://admin:anakeen@<nomDeDomaine>/dynacase-control/ --port <port> --context dynacase
+    <devtool> deploy -s . --url http://admin:anakeen@<nomDeDomaine>/dynacase-control/ --port <port> --context dynacase
 
 Vous pouvez maintenant vous rendre dans la gestion des utilisateurs :
 
-![ Importation : résultat ](20-10-import-result.png "Importation : résultat")
+![ Importation : résultat ](20-20-final.png "Importation : résultat")
 
 Vous pouvez voir que les groupes ont été ajoutés, l'arborescence respectée et les différents rôles associés.
 
 <span class="flag inline nota-bene"></span>  Le recalcul de l'arborescence des groupes et des droits est asynchrone,
-il peut y avoir un décalage de quelques minutes entre l'installation du paquet et l'arrivée des données sur le contexte.
+il peut y avoir un décalage de quelques minutes entre l'installation du paquet et la visualisation des données sur le contexte.
 
-## Conclusion {#quickstart:ebfe623e-99c3-4b85-92a5-a790685b3e7e}
+## Conclusion {#dynacase-qs:ebfe623e-99c3-4b85-92a5-a790685b3e7e}
 
 Dans ce chapitre, vous avez parcouru l'ensemble des techniques pour créer, associer et importer les différents éléments
 nécessaires à la gestion des comptes Dynacase.
 
 Ces éléments vous serviront dans toutes les autres phases de vos projets pour fixer les droits, définir des vues particulières, etc.
 
-## Pour aller plus loin {#quickstart:ff368e8d-9630-408d-9644-5383753f2ac0}
+## Pour aller plus loin {#dynacase-qs:ff368e8d-9630-408d-9644-5383753f2ac0}
 
 Vous pouvez consulter les chapitres suivants de la documentation :
 
--   [les comptes][docCompte],
+-   [les comptes][core-ref:account],
 -   [le format d'import CSV][formatCSV],
--   [les sources après le tutoriel][githubSourceAfter].
+-   [les sources après le tutoriel][github:sources_final].
 
 <!-- links -->
-
-[githubSourceAfter]: https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-20-20.zip "Github : source après le tutoriel"
-[docCompte]: https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:2bd98eec-5b03-4af0-b9d6-1bbf78fe9733.html "Doc Dynacase : Comptes"
-[formatCSV] : https://docs.anakeen.com/dynacase/3.2/dynacase-doc-core-reference/website/book/core-ref:2fb3284a-2424-44b2-93ae-41dc3969e093.html "Doc Dynacase : CSV"
-[annexe]:   #quickstart:69f091b6-34ef-47b0-a453-8e00676b7dcd
-[source_iuser]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-iuser/COGIP_AUDIT/IUSER__INIT_DATA.csv
-[source_igroup]: https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-group/COGIP_AUDIT/IGROUP__INIT_DATA.csv
+[core-ref:account]:         #core-ref:2bd98eec-5b03-4af0-b9d6-1bbf78fe9733 "Doc Dynacase : Comptes"
+[core-ref:xml_accounts]:    #core-ref:d9e6f16a-6627-4f12-9d5f-a136b21e7cc3
+[devtools:build.json]:      #devtools:f0fb9907-44e1-4956-aea1-14beb5cc077c
+[dynacase-qs:users]:        #dynacase-qs:08baa9d0-d741-4509-b5c5-7b72e74399c3
+[github:accounts.xml]:      https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-accounts/COGIP_AUDIT/accounts.xml
+[github:info.xml]:          https://github.com/Anakeen/dynacase-quick-start-code/blob/3.2-init-accounts/info.xml
+[github:sources_final]:     https://github.com/Anakeen/dynacase-quick-start-code/archive/3.2-after-20-20.zip "Github : source après le tutoriel"
