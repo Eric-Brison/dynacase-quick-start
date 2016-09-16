@@ -318,3 +318,4 @@ et avez abordé les principes des traductions.
 [devtools:index]: #devtools:
 [devtools:buildjson]: #devtools:f0fb9907-44e1-4956-aea1-14beb5cc077c
 [tuto_images]: https://github.com/Anakeen/dynacase-quick-start-code/tree/master/Images
+[eec-public-development-tools]: http://eec.anakeen.com/public/tools/development/
